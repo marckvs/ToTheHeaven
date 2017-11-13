@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraMovement : MonoBehaviour {
-    public Transform phiro;
+public class sprit : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -12,8 +11,6 @@ public class CameraMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 pos = new Vector3(phiro.position.x, 0,-20);
-        transform.position = pos;
-        
+		
 	}
 }

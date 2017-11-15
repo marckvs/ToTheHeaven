@@ -12,7 +12,7 @@ public class CameraMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Vector3 pos = new Vector3(phiro.position.x, 0,-20);
+        Vector3 pos = new Vector3(phiro.position.x, 0,-10);
         transform.position = pos;
         
 	}

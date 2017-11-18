@@ -14,6 +14,9 @@ public class PlatformMovement: MonoBehaviour {
     private float yMaxDistance;
 
     [SerializeField]
+    private float yMinDistance;
+
+    [SerializeField]
     private float xMaxDistance;
 
     
@@ -22,18 +25,20 @@ public class PlatformMovement: MonoBehaviour {
     void Start () {
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
         Transform transform = GetComponent<Transform>();
+        yMaxDistance += transform.position.y;
+        yMinDistance += transform.position.y;
 	}
 	
     private void moveVertPlatform(float y)
     {
-        if (y < yMaxDistance&& 0 < y)
-            transform.position = new Vector2(transform.position.x, transform.position.y + y);
-        if (y < yMaxDistance && 0 > y)
-            transform.position = new Vector2(transform.position.x, transform.position.y - y);
+
+        if (transform.position.y < yMaxDistance && transform.position.y > yMinDistance)
+            transform.position += new Vector3(0, y, 0);
+        else y = -y;
     }
 
     // Update is called once per frame
-    void Update () {
+    void FixedUpdate () {
         moveVertPlatform(yVel);
 	}
 }

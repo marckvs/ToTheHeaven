@@ -30,8 +30,8 @@ public class PhiroMovement : MonoBehaviour {
     public bool crouching;
     [Range(500, 5000)]
     public float velocity;
-    public float distance_max = 2f;//DISTANCIA MAXIMA
-    public float plat_height = 1.5f;
+    public float distance_max = 1f;//DISTANCIA MAXIMA
+    public float plat_height = 1f;
 
     //DASH
     public DashState dashState;
@@ -95,13 +95,11 @@ public class PhiroMovement : MonoBehaviour {
             case DashState.Ready:
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    Debug.Log("Paso 1");
                     dash_force = dash_speed;
                     dashState = DashState.Dashing;
                 }
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
-                    Debug.Log("Paso 1");
                     dash_force = -dash_speed;
                     dashState = DashState.Dashing;
                 }
@@ -110,8 +108,6 @@ public class PhiroMovement : MonoBehaviour {
                 dashDuration -= Time.deltaTime;
                 if(dashDuration < 0)
                 {
-                    Debug.Log("Paso 2");
-
                     dash_force = 0;
                     dashDuration = dash_duration_BK;
                     dashState = DashState.Cooldown;
@@ -121,7 +117,6 @@ public class PhiroMovement : MonoBehaviour {
                 dash_cooldown -= Time.deltaTime;
                 if (dash_cooldown < 0)
                 {
-                    Debug.Log("Paso 3");
 
                     dash_cooldown = dash_cooldown_BK;
                     dashState = DashState.Ready;
@@ -152,7 +147,6 @@ public class PhiroMovement : MonoBehaviour {
     }
     private void StandUp()
     {
-        Debug.Log("AAAAAAAAAAGACHADO");
         crouching = false;
         _phiroCOLL.size = new Vector2(_phiroCOLL.size.x, colliderSizeBackup);
     }
@@ -190,10 +184,13 @@ public class PhiroMovement : MonoBehaviour {
     {
         Vector3 posToRay = new Vector3(_phiroRGD.transform.position.x, _phiroRGD.transform.position.y + _phiroCOLL.size.y, _phiroRGD.transform.position.z);
         RaycastHit2D hit = Physics2D.Raycast(posToRay, _phiroRGD.transform.up, distance);
+        Debug.DrawLine(posToRay,  hit.point, Color.red,100);
         Debug.Log("ChildPosition: " + posToRay);
         Debug.Log("Direction: " + _phiroRGD.transform.up);
         Debug.Log("Distance: " + distance);
-        if (hit.collider != null)
+        Debug.DrawLine(posToRay, new Vector3(posToRay.x, posToRay.y + 10, posToRay.z));
+
+        if (hit.collider != null && hit.collider.tag == "Plat_Yellow")
         {
             grounded = false;
             Debug.Log("Ha colisionado");
@@ -207,17 +204,16 @@ public class PhiroMovement : MonoBehaviour {
         }
     }
     IEnumerator Climb(float distance, float platformHeight)
-    {
-        Debug.Log("Inicio Escalar");
-        while(_phiroRGD.transform.position.y-1 < distance + platformHeight)
-        {          
-            _phiroRGD.gravityScale = -3f;
+    {      
+        while (_phiroRGD.transform.position.y - 1 < distance + platformHeight)
+        {
+            _phiroRGD.gravityScale = -1f;
             _phiroRGD.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             yield return null;
         }
         _phiroRGD.gravityScale = 4f;
         _phiroRGD.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-
+        
 
     }
 }

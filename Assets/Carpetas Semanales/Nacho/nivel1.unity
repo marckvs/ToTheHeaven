@@ -1005,6 +1005,7 @@ GameObject:
   - component: {fileID: 197740133}
   - component: {fileID: 197740135}
   - component: {fileID: 197740134}
+  - component: {fileID: 197740136}
   m_Layer: 0
   m_Name: plataformas_tipos_3 (1)
   m_TagString: Untagged
@@ -1112,6 +1113,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.559999, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &197740136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 197740131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05249a82d6167c148a5d36df528d8472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1160827424}
+  colliderPlatform: {fileID: 197740135}
 --- !u!1 &219463756
 GameObject:
   m_ObjectHideFlags: 0
@@ -4034,6 +4048,7 @@ GameObject:
   - component: {fileID: 900155151}
   - component: {fileID: 900155154}
   - component: {fileID: 900155153}
+  - component: {fileID: 900155155}
   m_Layer: 0
   m_Name: plataforma_1
   m_TagString: Plat_Red
@@ -4141,6 +4156,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.76, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &900155155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 900155150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05249a82d6167c148a5d36df528d8472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1160827424}
+  colliderPlatform: {fileID: 900155154}
 --- !u!1 &909750131
 GameObject:
   m_ObjectHideFlags: 0
@@ -4461,6 +4489,7 @@ GameObject:
   - component: {fileID: 1004724554}
   - component: {fileID: 1004724556}
   - component: {fileID: 1004724555}
+  - component: {fileID: 1004724557}
   m_Layer: 0
   m_Name: plataformas_tipos_3 (10)
   m_TagString: Untagged
@@ -4568,6 +4597,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.559999, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &1004724557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1004724552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05249a82d6167c148a5d36df528d8472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1160827424}
+  colliderPlatform: {fileID: 1004724556}
 --- !u!1 &1059643008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4770,6 +4812,7 @@ GameObject:
   - component: {fileID: 1084184393}
   - component: {fileID: 1084184395}
   - component: {fileID: 1084184394}
+  - component: {fileID: 1084184396}
   m_Layer: 0
   m_Name: plataformas_tipos_3
   m_TagString: Untagged
@@ -4877,6 +4920,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.559999, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &1084184396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1084184391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05249a82d6167c148a5d36df528d8472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1160827424}
+  colliderPlatform: {fileID: 1084184395}
 --- !u!1 &1160827420
 GameObject:
   m_ObjectHideFlags: 0
@@ -4965,6 +5021,7 @@ MonoBehaviour:
   dashDuration: 0.1
   dash_cooldown: 2
   dash_speed: 50
+  stairsWithPlatform: 0
   stairs_speed: 5
 --- !u!212 &1160827425
 SpriteRenderer:
@@ -6019,6 +6076,7 @@ GameObject:
   - component: {fileID: 1378682600}
   - component: {fileID: 1378682602}
   - component: {fileID: 1378682601}
+  - component: {fileID: 1378682603}
   m_Layer: 0
   m_Name: plataformas_tipos_16
   m_TagString: Plat_Red
@@ -6126,6 +6184,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1378682603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1378682598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05249a82d6167c148a5d36df528d8472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1160827424}
+  colliderPlatform: {fileID: 1378682602}
 --- !u!1 &1420167543
 GameObject:
   m_ObjectHideFlags: 0
@@ -7734,7 +7805,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.027013779, y: 0.92239666}
+  m_Offset: {x: 0.027013779, y: 0.89221}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7745,7 +7816,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25175858, y: 6.3153324}
+  m_Size: {x: 0.25175858, y: 6.3757057}
   m_EdgeRadius: 0
 --- !u!1 &1942861024
 GameObject:
@@ -7975,6 +8046,7 @@ GameObject:
   - component: {fileID: 1974306913}
   - component: {fileID: 1974306915}
   - component: {fileID: 1974306914}
+  - component: {fileID: 1974306916}
   m_Layer: 0
   m_Name: plataformas_tipos_17
   m_TagString: Plat_Red
@@ -8082,6 +8154,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &1974306916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974306911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05249a82d6167c148a5d36df528d8472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1160827424}
+  colliderPlatform: {fileID: 1974306915}
 --- !u!1 &2009570608
 GameObject:
   m_ObjectHideFlags: 0

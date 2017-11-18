@@ -172,6 +172,15 @@ public class PhiroMovement : MonoBehaviour {
             onStairs = true;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Stairs")
+        {
+            onStairs = false;
+        }
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow")
@@ -185,16 +194,10 @@ public class PhiroMovement : MonoBehaviour {
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Stairs")
-        {
-            onStairs = false;          
-        }
-    }
+   
     private float PlatformChecker(float distance)
     {
-        Vector3 posToRay = new Vector3(_phiroRGD.transform.position.x, _phiroRGD.transform.position.y + _phiroCOLL.size.y, _phiroRGD.transform.position.z);
+        Vector3 posToRay = new Vector3(_phiroRGD.transform.position.x, _phiroRGD.transform.position.y + 1.3f, _phiroRGD.transform.position.z);
         RaycastHit2D hit = Physics2D.Raycast(posToRay, _phiroRGD.transform.up, distance);
         Debug.DrawLine(posToRay,  hit.point, Color.red,100);
         Debug.Log("ChildPosition: " + posToRay);

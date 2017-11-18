@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformMovement: MonoBehaviour {
+public class PlatformHoriMovement: MonoBehaviour {
 
     [SerializeField]
     private float yVel;
@@ -19,26 +19,32 @@ public class PlatformMovement: MonoBehaviour {
     [SerializeField]
     private float xMaxDistance;
 
-    
+    private bool cambio = true;
 
     // Use this for initialization
     void Start () {
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
-        Transform transform = GetComponent<Transform>();
         yMaxDistance += transform.position.y;
         yMinDistance += transform.position.y;
-	}
-	
-    private void moveVertPlatform(float y)
-    {
+    }
 
-        if (transform.position.y < yMaxDistance && transform.position.y > yMinDistance)
-            transform.position += new Vector3(0, y, 0);
-        else y = -y;
+    private void moveVertPlatform() {
+
+        if (transform.position.y > yMaxDistance && cambio==true) {
+            yVel = yVel * -1;
+            cambio = false;
+        }
+        else if (transform.position.y < yMinDistance && cambio == false) {
+            yVel = yVel * -1;
+            cambio = true;
+        }
+           
+        transform.position = new Vector3(transform.position.x, transform.position.y + yVel, transform.position.z);
+
     }
 
     // Update is called once per frame
     void FixedUpdate () {
-        moveVertPlatform(yVel);
+        moveVertPlatform();
 	}
 }

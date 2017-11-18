@@ -119,7 +119,6 @@ public class PhiroMovement : MonoBehaviour {
                 dash_cooldown -= Time.deltaTime;
                 if (dash_cooldown < 0)
                 {
-
                     dash_cooldown = dash_cooldown_BK;
                     dashState = DashState.Ready;
                 }
@@ -210,7 +209,6 @@ public class PhiroMovement : MonoBehaviour {
             grounded = false;
             Debug.Log("Ha colisionado");
             return hit.point.y;
-
         }
         else
         {
@@ -228,7 +226,5 @@ public class PhiroMovement : MonoBehaviour {
         }
         _phiroRGD.gravityScale = 4f;
         _phiroRGD.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
-        
-
     }
 }

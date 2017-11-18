@@ -20,6 +20,7 @@ public enum TipoPlataformas
 [RequireComponent(typeof(Collider2D))]
 public class PhiroMovement : MonoBehaviour {
     public bool grounded = true;
+    public bool onStairs;
     private Rigidbody2D _phiroRGD;
     private CapsuleCollider2D _phiroCOLL;
     private float colliderSizeBackup, hitDistance;
@@ -39,11 +40,17 @@ public class PhiroMovement : MonoBehaviour {
     public float dash_speed;
     private float dash_force = 0;
     private float dash_duration_BK, dash_cooldown_BK;
-    //-------------------------------------------------------------
+
+    //STAIRS
+    public float stairs_speed;
+    private float stairs_velocity;
+    private float gravityStore;
 
     void Start () {
+        onStairs = false;
         _phiroRGD = GetComponent<Rigidbody2D>();
         _phiroCOLL = GetComponent<CapsuleCollider2D>();
+        gravityStore = _phiroRGD.gravityScale;
         colliderSizeBackup = _phiroCOLL.size.y;
         dash_duration_BK = dashDuration;
         dash_cooldown_BK = dash_cooldown;
@@ -53,21 +60,35 @@ public class PhiroMovement : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && !onStairs)
         {
             Crouch();
         }
-        if (crouching && Input.GetKeyUp(KeyCode.S))
+
+        if (crouching && Input.GetKeyUp(KeyCode.S) && !onStairs)
         {
             StandUp();
         }
+
+        if (onStairs)
+        {
+            _phiroRGD.gravityScale = 0f;
+            stairs_velocity = stairs_speed * Input.GetAxisRaw("Vertical");
+            _phiroRGD.velocity = new Vector2(0, stairs_velocity);
+        }
+
+        if (!onStairs)
+        {
+            _phiroRGD.gravityScale = gravityStore;
+        }
+
     }
 
 
     void FixedUpdate () {
+        
         float x_axis = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * velocity;
         _phiroRGD.velocity = new Vector2(x_axis + dash_force, _phiroRGD.velocity.y);
-
 
         switch (dashState)
         {
@@ -122,9 +143,6 @@ public class PhiroMovement : MonoBehaviour {
                 grounded = true;
             }
         }
-
-
-
     }
 
     private void Crouch()
@@ -140,9 +158,17 @@ public class PhiroMovement : MonoBehaviour {
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow")
+        if((collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow") && !onStairs)
         {
             grounded = true;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Stairs")
+        {
+            onStairs = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -150,6 +176,14 @@ public class PhiroMovement : MonoBehaviour {
         if (collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow")
         {
             grounded = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Stairs")
+        {
+            onStairs = false;          
         }
     }
     private float PlatformChecker(float distance)

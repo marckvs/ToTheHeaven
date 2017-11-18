@@ -1357,6 +1357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 314879623}
   - component: {fileID: 314879624}
+  - component: {fileID: 314879625}
   m_Layer: 0
   m_Name: escalera (4)
   m_TagString: Untagged
@@ -1421,6 +1422,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &314879625
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 314879622}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.027013779, y: 1.3206472}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.08, y: 6.84}
+    newSize: {x: 2.08, y: 6.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25175858, y: 6.349962}
+  m_EdgeRadius: 0
 --- !u!1 &321845520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,6 +1647,7 @@ GameObject:
   m_Component:
   - component: {fileID: 340827634}
   - component: {fileID: 340827635}
+  - component: {fileID: 340827636}
   m_Layer: 0
   m_Name: escalera (2)
   m_TagString: Untagged
@@ -1685,6 +1712,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &340827636
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340827633}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.027013779, y: 0.92239666}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.08, y: 6.84}
+    newSize: {x: 2.08, y: 6.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25175858, y: 6.3153324}
+  m_EdgeRadius: 0
 --- !u!1 &354673826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3969,6 +4021,7 @@ MonoBehaviour:
   yVel: 0.01
   xVel: 0
   yMaxDistance: 0.1
+  yMinDistance: 0
   xMaxDistance: 0
 --- !u!1 &900155150
 GameObject:
@@ -4903,6 +4956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grounded: 1
+  onStairs: 0
   crouching: 0
   velocity: 1138
   distance_max: 4
@@ -4911,6 +4965,7 @@ MonoBehaviour:
   dashDuration: 0.1
   dash_cooldown: 2
   dash_speed: 50
+  stairs_speed: 5
 --- !u!212 &1160827425
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4964,9 +5019,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1186338036}
   - component: {fileID: 1186338037}
+  - component: {fileID: 1186338038}
   m_Layer: 0
   m_Name: escalera
-  m_TagString: Untagged
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4978,7 +5034,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1186338035}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.562386, y: -39.51, z: 0}
+  m_LocalPosition: {x: 15.87, y: -39.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 641234826}
@@ -5028,6 +5084,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1186338038
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1186338035}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.027013779, y: -0.3554201}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.08, y: 6.84}
+    newSize: {x: 2.08, y: 6.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25175858, y: 6.12916}
+  m_EdgeRadius: 0
 --- !u!1 &1202058206
 GameObject:
   m_ObjectHideFlags: 0
@@ -7104,6 +7185,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1790701236}
   - component: {fileID: 1790701237}
+  - component: {fileID: 1790701238}
   m_Layer: 0
   m_Name: escalera (3)
   m_TagString: Untagged
@@ -7168,6 +7250,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1790701238
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1790701235}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.027013779, y: 0.6933694}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.08, y: 6.84}
+    newSize: {x: 2.08, y: 6.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25175858, y: 5.857278}
+  m_EdgeRadius: 0
 --- !u!1 &1810562573
 GameObject:
   m_ObjectHideFlags: 0
@@ -7550,9 +7657,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1899046094}
   - component: {fileID: 1899046095}
+  - component: {fileID: 1899046096}
   m_Layer: 0
   m_Name: escalera (1)
-  m_TagString: Untagged
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7614,6 +7722,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1899046096
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1899046093}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.027013779, y: 0.92239666}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.08, y: 6.84}
+    newSize: {x: 2.08, y: 6.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25175858, y: 6.3153324}
+  m_EdgeRadius: 0
 --- !u!1 &1942861024
 GameObject:
   m_ObjectHideFlags: 0
@@ -7623,6 +7756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1942861025}
   - component: {fileID: 1942861026}
+  - component: {fileID: 1942861027}
   m_Layer: 0
   m_Name: escalera (5)
   m_TagString: Untagged
@@ -7687,6 +7821,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!61 &1942861027
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1942861024}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.027013779, y: 0.85366344}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.08, y: 6.84}
+    newSize: {x: 2.08, y: 6.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25175858, y: 6.177866}
+  m_EdgeRadius: 0
 --- !u!1 &1954060597
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,13 @@ public enum DashState
     Cooldown
 }
 
+public enum TipoPlataformas
+{
+    Plat_Red,
+    Plat_Yellow,
+    Stairs
+}
+
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 public class PhiroMovement : MonoBehaviour {
@@ -133,14 +140,14 @@ public class PhiroMovement : MonoBehaviour {
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Suelo")
+        if(collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow")
         {
             grounded = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Suelo")
+        if (collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow")
         {
             grounded = false;
         }

@@ -42,12 +42,14 @@ public class PhiroMovement : MonoBehaviour {
     private float dash_duration_BK, dash_cooldown_BK;
 
     //STAIRS
+    public bool stairsWithPlatform;
     public float stairs_speed;
     private float stairs_velocity;
     private float gravityStore;
 
     void Start () {
         onStairs = false;
+        stairsWithPlatform = false;
         _phiroRGD = GetComponent<Rigidbody2D>();
         _phiroCOLL = GetComponent<CapsuleCollider2D>();
         gravityStore = _phiroRGD.gravityScale;
@@ -162,6 +164,11 @@ public class PhiroMovement : MonoBehaviour {
         {
             grounded = true;
         }
+
+        if ((collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow") && onStairs)
+        {
+            stairsWithPlatform = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -176,6 +183,11 @@ public class PhiroMovement : MonoBehaviour {
         if (collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow")
         {
             grounded = false;
+        }
+
+        if ((collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow") && onStairs)
+        {
+            stairsWithPlatform = false;
         }
     }
 

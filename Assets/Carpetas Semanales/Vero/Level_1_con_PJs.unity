@@ -1154,7 +1154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788e776e957764047813f7450b8bce3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phiro: {fileID: 1258701304}
 --- !u!1 &60341098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,7 +2171,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 144304443}
-  m_LocalRotation: {x: 0, y: 0, z: -0.27475497, w: 0.9615143}
+  m_LocalRotation: {x: 0, y: 0, z: -0.2747552, w: 0.96151423}
   m_LocalPosition: {x: 2.7546692, y: 0.00000023841858, z: 0}
   m_LocalScale: {x: 1.4958221, y: 1.4958225, z: 0}
   m_Children: []
@@ -2495,7 +2494,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: -0.12042006, w: 0.99272305}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -1.5255564, y: -4.563452, z: 0}
+    targetPosition: {x: -0.8155564, y: -4.563452, z: 0}
     flip: 1
 --- !u!1 &235554565
 GameObject:
@@ -4694,7 +4693,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0.2705593, w: 0.96270335}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -0.7815565, y: -3.7934515, z: 0}
+    targetPosition: {x: -0.07155645, y: -3.7934515, z: 0}
     flip: 0
 --- !u!4 &373557728
 Transform:
@@ -5008,7 +5007,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 401077355}
-  m_LocalRotation: {x: 0, y: 0, z: -0.9656684, w: 0.25977787}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9656684, w: 0.259778}
   m_LocalPosition: {x: 2.207327, y: -1.000356, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
@@ -5028,7 +5027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 2.7546685
+  m_Length: 2.7546692
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 144304444}
   m_AttachedIK: {fileID: 867382048}
@@ -11139,16 +11138,16 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 401077356}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: -0.9656684, w: 0.25977787}
+      solverRotation: {x: 0, y: 0, z: -0.9656684, w: 0.259778}
       defaultLocalRotation: {x: 0, y: 0, z: -0.963442, w: 0.2679171}
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 144304444}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: -0.27475497, w: 0.9615143}
+      solverRotation: {x: 0, y: 0, z: -0.2747552, w: 0.96151423}
       defaultLocalRotation: {x: 0, y: 0, z: -0.27137178, w: 0.9624746}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -1.8495564, y: -3.8094516, z: 0}
+    targetPosition: {x: -1.1395564, y: -3.8094516, z: 0}
     flip: 1
 --- !u!1 &874833480
 GameObject:
@@ -16018,6 +16017,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grounded: 1
+  onStairs: 0
+  zip_line: 0
   crouching: 0
   velocity: 1138
   distance_max: 4
@@ -16026,6 +16027,8 @@ MonoBehaviour:
   dashDuration: 0.1
   dash_cooldown: 2
   dash_speed: 50
+  stairsWithPlatform: 0
+  stairs_speed: 0
 --- !u!1 &1265368135
 GameObject:
   m_ObjectHideFlags: 0
@@ -23231,7 +23234,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1823855204}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -1.87, y: -3.47, z: 0}
+  m_LocalPosition: {x: -1.16, y: -3.47, z: 0}
   m_LocalScale: {x: 0.22, y: 0.22, z: 0}
   m_Children:
   - {fileID: 427889441}
@@ -23405,7 +23408,7 @@ Animator:
   m_GameObject: {fileID: 1846864233}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d0e7cc8cbd417a44da63016544d709e2, type: 2}
+  m_Controller: {fileID: 9100000, guid: 905608d6a923d29428f597ecd699133e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -25038,7 +25041,7 @@ Animator:
   m_GameObject: {fileID: 2018081106}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c97660350d5894d5595f3f48b340cb28, type: 2}
+  m_Controller: {fileID: 9100000, guid: ddd24ae0f26159245b5a21a05818a7dd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -26165,7 +26168,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0.15626721, w: 0.9877149}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: -1.1915565, y: -4.563452, z: 0}
+    targetPosition: {x: -0.48155642, y: -4.563452, z: 0}
     flip: 0
 --- !u!1 &2118369933
 GameObject:

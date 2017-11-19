@@ -69,7 +69,7 @@ public class PhiroMovement : MonoBehaviour {
             Crouch();
         }
 
-        if (crouching && Input.GetKeyUp(KeyCode.S) && !onStairs)
+        if (crouching && Input.GetKeyUp(KeyCode.S))
         {
             StandUp();
         }
@@ -165,15 +165,11 @@ public class PhiroMovement : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if((collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow") && !onStairs)
+        if(collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow")
         {
             grounded = true;
         }
 
-        if ((collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow") && onStairs)
-        {
-            stairsWithPlatform = true;
-        }
         if (collision.gameObject.tag == "zip_line")
         {
             zip_line = true;
@@ -187,7 +183,12 @@ public class PhiroMovement : MonoBehaviour {
         {
             onStairs = true;
         }
-       
+
+        if (collision.gameObject.tag == "up_stair")
+        {
+            stairsWithPlatform = true;
+        }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -196,7 +197,11 @@ public class PhiroMovement : MonoBehaviour {
         {
             onStairs = false;
         }
-        
+
+        if (collision.gameObject.tag == "up_stair")
+        {
+            stairsWithPlatform = false;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -206,10 +211,6 @@ public class PhiroMovement : MonoBehaviour {
             grounded = false;
         }
 
-        if ((collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow") && onStairs)
-        {
-            stairsWithPlatform = false;
-        }
         if (collision.gameObject.tag == "zip_line")
         {
             zip_line = false;

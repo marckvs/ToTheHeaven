@@ -23,6 +23,7 @@ public class PlatformVertMovement: MonoBehaviour {
         yMinDistance += transform.position.y;
     }
 
+
     private void moveVertPlatform() {
 
         if (transform.position.y > yMaxDistance && cambio==true) {
@@ -35,7 +36,6 @@ public class PlatformVertMovement: MonoBehaviour {
         }
            
         transform.position = new Vector3(transform.position.x, transform.position.y + yVel, transform.position.z);
-
     }
 
     // Update is called once per frame

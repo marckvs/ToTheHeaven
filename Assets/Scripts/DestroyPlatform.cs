@@ -7,11 +7,6 @@ public class DestroyPlatform : MonoBehaviour {
     [SerializeField]
     private float timeToDestroy;
 
-    [SerializeField]
-    private float timeToAppear;
-
-
-
     private void OnCollisionEnter2D(Collision2D c)
     {
         if (c.gameObject.tag == "Phiro")
@@ -20,12 +15,12 @@ public class DestroyPlatform : MonoBehaviour {
         }
     }
 
- 
     IEnumerator VisibilityFalse()
     {
 
         yield return new WaitForSeconds(timeToDestroy);
-        gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
+        Debug.Log("a");
 
     }
 

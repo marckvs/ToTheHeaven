@@ -5,16 +5,10 @@ using UnityEngine;
 public class PlatformHoriMovement: MonoBehaviour {
 
     [SerializeField]
-    private float yVel;
-
-    [SerializeField]
     private float xVel;
 
     [SerializeField]
-    private float yMaxDistance;
-
-    [SerializeField]
-    private float yMinDistance;
+    private float xMinDistance;
 
     [SerializeField]
     private float xMaxDistance;
@@ -24,22 +18,22 @@ public class PlatformHoriMovement: MonoBehaviour {
     // Use this for initialization
     void Start () {
         BoxCollider2D collider = GetComponent<BoxCollider2D>();
-        yMaxDistance += transform.position.y;
-        yMinDistance += transform.position.y;
+        xMaxDistance += transform.position.x;
+        xMinDistance += transform.position.x;
     }
 
     private void moveVertPlatform() {
 
-        if (transform.position.y > yMaxDistance && cambio==true) {
-            yVel = yVel * -1;
+        if (transform.position.x > xMaxDistance && cambio==true) {
+            xVel = xVel * -1;
             cambio = false;
         }
-        else if (transform.position.y < yMinDistance && cambio == false) {
-            yVel = yVel * -1;
+        else if (transform.position.x < xMinDistance && cambio == false) {
+            xVel = xVel * -1;
             cambio = true;
         }
            
-        transform.position = new Vector3(transform.position.x, transform.position.y + yVel, transform.position.z);
+        transform.position = new Vector3(transform.position.x + xVel, transform.position.y, transform.position.z);
 
     }
 

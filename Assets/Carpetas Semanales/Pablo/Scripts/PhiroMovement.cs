@@ -21,6 +21,7 @@ public enum TipoPlataformas
 public class PhiroMovement : MonoBehaviour {
     public bool grounded = true;
     public bool onStairs;
+    public bool zip_line;
     private Rigidbody2D _phiroRGD;
     private CapsuleCollider2D _phiroCOLL;
     private float colliderSizeBackup, hitDistance;
@@ -32,6 +33,7 @@ public class PhiroMovement : MonoBehaviour {
     public float velocity;
     public float distance_max = 1f;//DISTANCIA MAXIMA
     public float plat_height = 1f;
+    float x_axis;
 
     //DASH
     public DashState dashState;
@@ -88,9 +90,18 @@ public class PhiroMovement : MonoBehaviour {
 
 
     void FixedUpdate () {
-        
-        float x_axis = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * velocity;
-        _phiroRGD.velocity = new Vector2(x_axis + dash_force, _phiroRGD.velocity.y);
+
+        if (zip_line)
+        {
+            Vector3 f = _phiroRGD.transform.forward;
+            Debug.Log(f);
+            _phiroRGD.velocity = new Vector2(2, 0);
+        }
+        else
+        {
+            x_axis = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * velocity;
+            _phiroRGD.velocity = new Vector2(x_axis + dash_force, _phiroRGD.velocity.y);
+        }
 
         switch (dashState)
         {
@@ -151,6 +162,7 @@ public class PhiroMovement : MonoBehaviour {
         crouching = false;
         _phiroCOLL.size = new Vector2(_phiroCOLL.size.x, colliderSizeBackup);
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if((collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow") && !onStairs)
@@ -162,6 +174,11 @@ public class PhiroMovement : MonoBehaviour {
         {
             stairsWithPlatform = true;
         }
+        if (collision.gameObject.tag == "zip_line")
+        {
+            zip_line = true;
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -170,6 +187,7 @@ public class PhiroMovement : MonoBehaviour {
         {
             onStairs = true;
         }
+       
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -178,6 +196,7 @@ public class PhiroMovement : MonoBehaviour {
         {
             onStairs = false;
         }
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -190,6 +209,10 @@ public class PhiroMovement : MonoBehaviour {
         if ((collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow") && onStairs)
         {
             stairsWithPlatform = false;
+        }
+        if (collision.gameObject.tag == "zip_line")
+        {
+            zip_line = false;
         }
     }
 

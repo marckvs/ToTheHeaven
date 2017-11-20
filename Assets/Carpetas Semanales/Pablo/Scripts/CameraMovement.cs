@@ -7,8 +7,6 @@ public class CameraMovement : MonoBehaviour {
     private SpriteRenderer background;
     private Vector2 limits;
     private Vector2 bg_bounds;
-    private bool following_x_axis;
-    private bool following_y_axis;
 
 	void Start () {
         phiro = GameObject.Find("Phiro").GetComponent<Transform>();

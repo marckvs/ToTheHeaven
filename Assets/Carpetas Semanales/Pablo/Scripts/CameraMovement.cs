@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour {
-    private Transform phiro;
-    private SpriteRenderer background;
+    public Transform phiro;
+    public SpriteRenderer background;
     private Vector2 limits;
     private Vector2 bg_bounds;
 
 	void Start () {
-        phiro = GameObject.Find("Phiro").GetComponent<Transform>();
-        background = GameObject.Find("background").GetComponent<SpriteRenderer>();
+        //phiro = GameObject.Find("Phiro").GetComponent<Transform>();
+        //background = GameObject.Find("background").GetComponent<SpriteRenderer>();
         limits = new Vector2(Camera.main.aspect*Camera.main.orthographicSize, Camera.main.orthographicSize);
         bg_bounds = new Vector2(background.sprite.bounds.size.x/2, background.sprite.bounds.size.y/2);
     }

@@ -1,31 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!21 &2118724
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: t_rex_jaw_open_0
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 726d2784a87b044f182b7487b3b8ebb8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!43 &4383038
 Mesh:
   m_ObjectHideFlags: 1
@@ -3861,11 +3835,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10c0be6d28fe4d539c4a39822fe301c, type: 3}
   m_Name: t_rex_jaw_open
   m_EditorClassIdentifier: 
-  m_ApiVersion: 3
+  m_ApiVersion: 4
   m_Sprite: {fileID: 21300008, guid: 726d2784a87b044f182b7487b3b8ebb8, type: 3}
   m_SharedMesh: {fileID: 4383038}
-  m_SharedMaterials:
-  - {fileID: 2118724}
   pivotPoint: {x: 559.7833, y: 562.15674}
   texVertices:
   - vertex: {x: 614.5982, y: 657.31226}
@@ -5312,6 +5284,7 @@ MonoBehaviour:
     name: Jaw 2
     color: {r: 1, g: 0.75, b: 0, a: 1}
     zOrder: -1
+  m_SharedMaterials: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

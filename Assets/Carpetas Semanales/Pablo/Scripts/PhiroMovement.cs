@@ -49,9 +49,6 @@ public class PhiroMovement : MonoBehaviour {
     private float stairs_velocity;
     private float gravityStore;
 
-    //LIGHTS
-    private int light_counter = 0;
-
     void Start () {
         onStairs = false;
         stairsWithPlatform = false;
@@ -176,12 +173,6 @@ public class PhiroMovement : MonoBehaviour {
         if (collision.gameObject.tag == "zip_line")
         {
             zip_line = true;
-        }
-
-        if (collision.gameObject.tag == "light")
-        {
-            light_counter += 1;
-            print(light_counter);
         }
 
     }

@@ -19,7 +19,7 @@ public enum TipoPlataformas
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
 public class PhiroMovement : MonoBehaviour {
-    public bool grounded = true;
+    public static bool grounded = true;
     public bool onStairs;
     public bool zip_line;
     private Rigidbody2D _phiroRGD;

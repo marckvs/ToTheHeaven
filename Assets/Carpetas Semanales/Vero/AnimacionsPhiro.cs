@@ -6,54 +6,115 @@ public class AnimacionsPhiro : MonoBehaviour
 {
 
     public Animator phiroAnims;
-    public bool facingRight = true;
+    public bool facingRight;
+    public Transform phiroTransform;
+    private Rigidbody2D _PhiroRGD;
 
     // Use this for initialization
     void Start()
     {
-
+        _PhiroRGD = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
+        //float h = Input.GetAxis("Horizontal");
+        /*
+        float xvel = _PhiroRGD.velocity.x;
+        if (xvel == 0)
+        {
+            phiroAnims.SetTrigger("idle");
+        }
+
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A) && PhiroMovement.grounded && xvel!=0)
+        {            
+            if (xvel > 0)
+            {
+                //Flip();
+                //facingRight = true;
+                
+                if (!facingRight) {
+                    facingRight = true;
+                    transform.localPosition = _PhiroRGD.transform.position;
+                    phiroTransform.localScale = Vector3.Scale(phiroTransform.localScale, new Vector3(-1, 1, 1));
+
+                }
+                else { facingRight = true; }
+            }
+             else if(xvel < 0)
+            {
+                //Flip();
+                //facingRight = false;
+                
+                if (!facingRight) {
+                    facingRight = true;
+                    transform.localPosition = _PhiroRGD.transform.position;
+                    phiroTransform.localScale = Vector3.Scale(phiroTransform.localScale, new Vector3(-1, 1, 1));
+                }
+                else { facingRight = false; }
+            }
+
+
+            phiroAnims.SetTrigger("correr");
+            Debug.Log(facingRight);
+
+        }
+       
+        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
+        {
+            phiroAnims.SetBool("CorrerD", false);
+        }
+        */
+        float xvel = _PhiroRGD.velocity.x;
+        if (xvel == 0)
+        {
+            phiroAnims.SetBool("running", false);
+            phiroAnims.SetTrigger("idle");
+
+
+        }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            phiroAnims.SetBool("CorrerI", false);
-            float h = Input.GetAxis("Horizontal");
-            if (h > 0 && !facingRight)
-                Flip();
-            phiroAnims.SetBool("CorrerD", true);
+            if (!facingRight)
+            {
+                facingRight = true;
+                phiroTransform.localScale = Vector3.Scale(phiroTransform.localScale, new Vector3(-1, 1, 1));
+            }
+            facingRight = true;
+            phiroAnims.SetBool("running", true);
+
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            phiroAnims.SetBool("CorrerD", false);
-            float h = Input.GetAxis("Horizontal");
-            if (h < 0 && facingRight)
-                Flip();
-            phiroAnims.SetBool("CorrerI", true);
+            if (facingRight)
+            {
+                facingRight = false;
+                phiroTransform.localScale = Vector3.Scale(phiroTransform.localScale, new Vector3(-1, 1, 1));
+            }
+            facingRight = false;
+            phiroAnims.SetBool("running", true);
+
+
         }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            phiroAnims.SetBool("CorrerD", false);
-        }
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            phiroAnims.SetBool("CorrerI", false);
-        }
+
 
         if (Input.GetKeyDown(KeyCode.S))
         {
             phiroAnims.SetTrigger("agacharse");
+
         }
+        
     }
 
     void Flip()
     {
         facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        Debug.Log("Flip");
+        transform.localPosition = _PhiroRGD.transform.position;
+        phiroTransform.localScale = Vector3.Scale(phiroTransform.localScale, new Vector3(-1, 1, 1));
+
+
     }
 }
 

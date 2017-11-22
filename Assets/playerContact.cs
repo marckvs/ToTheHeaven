@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerContact : MonoBehaviour {
 
+    public Light lightBall;
+    public float lightIntensityMax=10;
 
 	// Use this for initialization
 	void Start ()
@@ -12,7 +14,8 @@ public class playerContact : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 

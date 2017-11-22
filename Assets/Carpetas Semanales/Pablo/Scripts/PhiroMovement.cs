@@ -96,7 +96,7 @@ public class PhiroMovement : MonoBehaviour {
 
         if (zip_line)
         {
-            Vector3 f = _phiroRGD.transform.right;
+            Vector3 f = _phiroRGD.transform.forward;
             Debug.Log(f);
             _phiroRGD.velocity = new Vector2(2, 0);
         }
@@ -109,9 +109,14 @@ public class PhiroMovement : MonoBehaviour {
         switch (dashState)
         {
             case DashState.Ready:
-                if (Input.GetKeyDown(KeyCode.LeftShift))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
-                    dash_force = dash_speed * _phiroRGD.transform.right.x;
+                    dash_force = dash_speed;
+                    dashState = DashState.Dashing;
+                }
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    dash_force = -dash_speed;
                     dashState = DashState.Dashing;
                 }
                 break;

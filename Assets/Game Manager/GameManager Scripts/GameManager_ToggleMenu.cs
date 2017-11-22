@@ -1,0 +1,64 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace GM
+{
+    public class GameManager_ToggleMenu: MonoBehaviour
+    {
+
+        private GameManager_Master gameManagerMaster;
+        public GameObject menu;
+        // Use this for initialization
+        void Start()
+        {
+            //ToggleMenu();
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            CheckForMenuToggleRequest();
+        }
+
+        void OnEnable()
+        {
+            SetInitialReferences();
+            Debug.Log("toggleMenu");
+            gameManagerMaster.GameOverEvent += ToggleMenu;
+
+        }
+
+        void OnDisable()
+        {
+            gameManagerMaster.GameOverEvent -= ToggleMenu;
+
+        }
+
+        void SetInitialReferences()
+        {
+            gameManagerMaster = GetComponent<GameManager_Master>();
+        }
+
+        void CheckForMenuToggleRequest()
+        {
+            if(Input.GetKeyUp(KeyCode.Escape) && !gameManagerMaster.isGameOver)
+            {
+                ToggleMenu();
+            }
+        }
+
+        void ToggleMenu()
+        {
+            if (menu != null)
+            {
+                menu.SetActive(!menu.activeSelf);
+                gameManagerMaster.isMenuOn = !gameManagerMaster.isMenuOn;
+                gameManagerMaster.CallEventMenuToggle();
+            }
+           
+        }
+
+
+    }
+}

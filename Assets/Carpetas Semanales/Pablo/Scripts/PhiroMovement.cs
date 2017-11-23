@@ -50,11 +50,14 @@ public class PhiroMovement : MonoBehaviour {
     private float gravityStore;
 
     //LIGHTS
-    private int light_counter = 0;
+    public int light_counter = 0;
+    public bool light_caught;
+    public doorLightCounter doorLighCounterRef;
 
     void Start () {
         onStairs = false;
         stairsWithPlatform = false;
+        light_caught = false;
         _phiroRGD = GetComponent<Rigidbody2D>();
         _phiroCOLL = GetComponent<CapsuleCollider2D>();
         gravityStore = _phiroRGD.gravityScale;
@@ -181,7 +184,7 @@ public class PhiroMovement : MonoBehaviour {
         if (collision.gameObject.tag == "light")
         {
             light_counter += 1;
-            print(light_counter);
+            doorLighCounterRef.setActiveLight(light_counter);
         }
 
     }
@@ -223,6 +226,11 @@ public class PhiroMovement : MonoBehaviour {
         if (collision.gameObject.tag == "zip_line")
         {
             zip_line = false;
+        }
+
+        if (collision.gameObject.tag == "light")
+        {
+            light_caught = false;
         }
     }
 

@@ -368,7 +368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1835767941164812
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1911649497002952
 GameObject:
   m_ObjectHideFlags: 1
@@ -936,6 +936,8 @@ MonoBehaviour:
   distance_max: 4
   plat_height: 0.5
   knockbackForce: {x: 5000, y: 10000}
+  hitParticles: {fileID: 198411508750521360, guid: 3e8e4af0bf39cb448a8ca5fd50f3c477,
+    type: 2}
   dashState: 0
   dashDuration: 0.1
   dash_cooldown: 2
@@ -1015,7 +1017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.7199987
+  m_Length: 0.7199986
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4075234159210886}
   m_AttachedIK: {fileID: 0}
@@ -1031,7 +1033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.2223386
+  m_Length: 1.2223388
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4752687435423246}
   m_AttachedIK: {fileID: 114336488165949420}
@@ -1205,7 +1207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.2572318
+  m_Length: 1.2572317
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 4051155149556148}
   m_AttachedIK: {fileID: 114508596498177834}

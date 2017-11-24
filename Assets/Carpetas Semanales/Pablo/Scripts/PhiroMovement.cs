@@ -39,6 +39,8 @@ public class PhiroMovement : MonoBehaviour {
     public Vector2 knockbackForce = new Vector2(5000, 10000);
     private Vector2 inverseKnockbackForce;
     private bool knockingBack;
+    //EffectsOnCollision
+    public ParticleSystem hitParticles;
 
     //DASH
     public DashState dashState;
@@ -60,6 +62,8 @@ public class PhiroMovement : MonoBehaviour {
     public doorLightCounter doorLighCounterRef;
 
     void Start () {
+        hitParticles = Instantiate(hitParticles);
+        hitParticles.gameObject.SetActive(false);
         onStairs = false;
         stairsWithPlatform = false;
         light_caught = false;
@@ -70,7 +74,6 @@ public class PhiroMovement : MonoBehaviour {
         dash_duration_BK = dashDuration;
         dash_cooldown_BK = dash_cooldown;
         dashState = DashState.Ready;
-
 
     }
 
@@ -200,8 +203,11 @@ public class PhiroMovement : MonoBehaviour {
             Debug.Log("Auch!");
             knockingBack = true;
 
-            ContactPoint2D pointOfCollision = collision.contacts[0];
+            ContactPoint2D pointOfCollision = collision.contacts[collision.contacts.Length/2];
+            hitParticles.gameObject.SetActive(false);
             Vector2 pointToAddForce = pointOfCollision.point;
+            hitParticles.transform.position = pointToAddForce;
+            hitParticles.gameObject.SetActive(true);
             if (pointOfCollision.normal.x > 0)
             {
                 Debug.Log("Right");
@@ -215,7 +221,8 @@ public class PhiroMovement : MonoBehaviour {
                 Debug.Log("BackForce: " + inverseKnockbackForce);
                 _phiroRGD.AddForceAtPosition(inverseKnockbackForce, pointToAddForce);
             }
-
+            Vector3 particlePosition = new Vector3(pointToAddForce.x, pointToAddForce.y, -5);
+            Debug.Log("Spawn de particulas en: " + particlePosition);
             StartCoroutine(KnockCooldown());
 
         }

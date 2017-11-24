@@ -36,7 +36,9 @@ public class PhiroMovement : MonoBehaviour {
     float x_axis;
 
     //ENEMY COLLISION
-    public Vector2 knockbackForce;
+    public Vector2 knockbackForce = new Vector2(5000, 10000);
+    private Vector2 inverseKnockbackForce;
+    private bool knockingBack;
 
     //DASH
     public DashState dashState;
@@ -68,6 +70,7 @@ public class PhiroMovement : MonoBehaviour {
         dash_duration_BK = dashDuration;
         dash_cooldown_BK = dash_cooldown;
         dashState = DashState.Ready;
+
 
     }
 
@@ -108,8 +111,11 @@ public class PhiroMovement : MonoBehaviour {
         }
         else
         {
-            x_axis = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * velocity;
-            _phiroRGD.velocity = new Vector2(x_axis + dash_force, _phiroRGD.velocity.y);
+            if (!knockingBack)
+            {
+                x_axis = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * velocity;
+                _phiroRGD.velocity = new Vector2(x_axis + dash_force, _phiroRGD.velocity.y);
+            }
         }
 
         switch (dashState)
@@ -191,16 +197,41 @@ public class PhiroMovement : MonoBehaviour {
         }
         if(collision.gameObject.tag == "Enemigo")
         {
-            
-            ContactPoint2D pointOfCollision = collision.contacts[0];
-            //Vector2 pointToAddForce = pointOfCollision.point;
-            //_phiroRGD.AddForceAtPosition(knockbackForce, pointToAddForce);
+            Debug.Log("Auch!");
+            knockingBack = true;
 
-            pointOfCollision.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(knockbackForce);
-            _phiroRGD.AddForce(knockbackForce);
+            ContactPoint2D pointOfCollision = collision.contacts[0];
+            Vector2 pointToAddForce = pointOfCollision.point;
+            if (pointOfCollision.normal.x > 0)
+            {
+                Debug.Log("Right");
+                _phiroRGD.AddForceAtPosition(knockbackForce, pointToAddForce);
+                Debug.Log("BackForce: " + knockbackForce);
+            }
+            else if(pointOfCollision.normal.x < 0)
+            {
+                Debug.Log("Left");
+                inverseKnockbackForce = new Vector2(-knockbackForce.x, knockbackForce.y);
+                Debug.Log("BackForce: " + inverseKnockbackForce);
+                _phiroRGD.AddForceAtPosition(inverseKnockbackForce, pointToAddForce);
+            }
+
+            StartCoroutine(KnockCooldown());
 
         }
 
+    }
+
+    IEnumerator KnockCooldown()
+    {
+        float timer = 0.5f;
+        while((timer -= Time.deltaTime) > 0)
+        {
+            knockingBack = true;
+            yield return null;
+        }
+        knockingBack = false;
+        yield return null;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

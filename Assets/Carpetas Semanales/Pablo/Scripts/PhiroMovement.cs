@@ -35,6 +35,9 @@ public class PhiroMovement : MonoBehaviour {
     public float plat_height = 1f;
     float x_axis;
 
+    //ENEMY COLLISION
+    public Vector2 knockbackForce;
+
     //DASH
     public DashState dashState;
     public float dashDuration = 0.2f;
@@ -185,6 +188,17 @@ public class PhiroMovement : MonoBehaviour {
         {
             light_counter += 1;
             doorLighCounterRef.setActiveLight(light_counter);
+        }
+        if(collision.gameObject.tag == "Enemigo")
+        {
+            
+            ContactPoint2D pointOfCollision = collision.contacts[0];
+            //Vector2 pointToAddForce = pointOfCollision.point;
+            //_phiroRGD.AddForceAtPosition(knockbackForce, pointToAddForce);
+
+            pointOfCollision.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(knockbackForce);
+            _phiroRGD.AddForce(knockbackForce);
+
         }
 
     }

@@ -9,6 +9,7 @@ public class AnimacionsPhiro : MonoBehaviour
     public bool facingRight;
     public Transform phiroTransform;
     private Rigidbody2D _PhiroRGD;
+    private bool running = false;
 
     // Use this for initialization
     void Start()
@@ -19,60 +20,13 @@ public class AnimacionsPhiro : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        //float h = Input.GetAxis("Horizontal");
-        /*
+
         float xvel = _PhiroRGD.velocity.x;
-        if (xvel == 0)
+        bool stairs = PhiroMovement.onStairs;
+
+        if (xvel == 0 && running == false && stairs == false)
         {
             phiroAnims.SetTrigger("idle");
-        }
-
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A) && PhiroMovement.grounded && xvel!=0)
-        {            
-            if (xvel > 0)
-            {
-                //Flip();
-                //facingRight = true;
-                
-                if (!facingRight) {
-                    facingRight = true;
-                    transform.localPosition = _PhiroRGD.transform.position;
-                    phiroTransform.localScale = Vector3.Scale(phiroTransform.localScale, new Vector3(-1, 1, 1));
-
-                }
-                else { facingRight = true; }
-            }
-             else if(xvel < 0)
-            {
-                //Flip();
-                //facingRight = false;
-                
-                if (!facingRight) {
-                    facingRight = true;
-                    transform.localPosition = _PhiroRGD.transform.position;
-                    phiroTransform.localScale = Vector3.Scale(phiroTransform.localScale, new Vector3(-1, 1, 1));
-                }
-                else { facingRight = false; }
-            }
-
-
-            phiroAnims.SetTrigger("correr");
-            Debug.Log(facingRight);
-
-        }
-       
-        if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
-        {
-            phiroAnims.SetBool("CorrerD", false);
-        }
-        */
-        float xvel = _PhiroRGD.velocity.x;
-        if (xvel == 0)
-        {
-            phiroAnims.SetBool("running", false);
-            phiroAnims.SetTrigger("idle");
-
-
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -83,6 +37,7 @@ public class AnimacionsPhiro : MonoBehaviour
             }
             facingRight = true;
             phiroAnims.SetBool("running", true);
+            running = true;
 
         }
         if (Input.GetKeyDown(KeyCode.A))
@@ -94,17 +49,43 @@ public class AnimacionsPhiro : MonoBehaviour
             }
             facingRight = false;
             phiroAnims.SetBool("running", true);
+            running = true;
 
 
         }
 
+        if (Input.GetKey(KeyCode.D)== false && Input.GetKey(KeyCode.A)==false)
+        {
+            phiroAnims.SetBool("running", false);
+            running = false;
+        }
 
-        if (Input.GetKeyDown(KeyCode.S))
+
+        if (Input.GetKeyDown(KeyCode.S) && stairs == false)
         {
             phiroAnims.SetTrigger("agacharse");
 
         }
-        
+
+        //subir escaleras
+
+        if (Input.GetKeyDown(KeyCode.W) && stairs == true)
+        {
+            phiroAnims.SetBool("subir", true);
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.S) && stairs == true)
+        {
+            phiroAnims.SetBool("subir", true);
+        }
+
+        if (stairs == false && phiroAnims.GetBool("subir")==true)
+        {
+            phiroAnims.SetBool("subir", false);
+        }
+
+
     }
 
     void Flip()

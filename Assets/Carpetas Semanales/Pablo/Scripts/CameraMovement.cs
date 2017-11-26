@@ -7,6 +7,8 @@ public class CameraMovement : MonoBehaviour {
     private SpriteRenderer background;
     private Vector2 limits;
     private Vector2 bg_bounds;
+    [Range(0.2f, 20f)]
+    public float smoothness = 4.5f;
 
 	void Start () {
         phiro = GameObject.FindGameObjectWithTag("Phiro").GetComponent<Transform>();
@@ -16,7 +18,7 @@ public class CameraMovement : MonoBehaviour {
     }
 
     void FixedUpdate () {
-        transform.position = new Vector3(phiro.position.x, phiro.position.y, -10);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(phiro.position.x, phiro.position.y, -10), smoothness*Time.deltaTime);
         if(transform.position.x >= bg_bounds.x - limits.x)
         {
             transform.position = new Vector3(bg_bounds.x - limits.x, transform.position.y, -10);
@@ -27,7 +29,7 @@ public class CameraMovement : MonoBehaviour {
         }
         else
         {
-            transform.position = new Vector3(phiro.position.x, transform.position.y, -10);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(phiro.position.x, transform.position.y, -10), smoothness*Time.deltaTime);
         }
         if (transform.position.y >= bg_bounds.y - limits.y)
         {
@@ -39,7 +41,7 @@ public class CameraMovement : MonoBehaviour {
         }
         else
         {
-            transform.position = new Vector3(transform.position.x, phiro.position.y, -10);
+            transform.position = Vector3.Lerp(transform.position, new Vector3(transform.position.x, phiro.position.y, -10), smoothness*Time.deltaTime);
         }
     }
 }

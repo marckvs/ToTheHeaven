@@ -39,6 +39,7 @@ public class PhiroMovement : MonoBehaviour {
     public Vector2 knockbackForce = new Vector2(5000, 10000);
     private Vector2 inverseKnockbackForce;
     private bool knockingBack;
+    public bool hit;
     //EffectsOnCollision
     public ParticleSystem hitParticles;
 
@@ -76,6 +77,10 @@ public class PhiroMovement : MonoBehaviour {
         dashState = DashState.Ready;
 
     }
+    public void Reset()
+    {
+        knockingBack = false;
+    }
 
     private void Update()
     {
@@ -105,7 +110,6 @@ public class PhiroMovement : MonoBehaviour {
 
 
     void FixedUpdate () {
-
         if (zip_line)
         {
             Vector3 f = _phiroRGD.transform.forward;
@@ -124,12 +128,12 @@ public class PhiroMovement : MonoBehaviour {
         switch (dashState)
         {
             case DashState.Ready:
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKey(KeyCode.E) && !knockingBack)
                 {
                     dash_force = dash_speed;
                     dashState = DashState.Dashing;
                 }
-                if (Input.GetKeyDown(KeyCode.Q))
+                if (Input.GetKey(KeyCode.Q) && !knockingBack)
                 {
                     dash_force = -dash_speed;
                     dashState = DashState.Dashing;
@@ -170,6 +174,11 @@ public class PhiroMovement : MonoBehaviour {
         }
     }
 
+    private void LateUpdate()
+    {
+        hit = false;
+    }
+
     private void Crouch()
     {
         crouching = true;
@@ -200,6 +209,7 @@ public class PhiroMovement : MonoBehaviour {
         }
         if(collision.gameObject.tag == "Enemigo")
         {
+            hit = true;
             Debug.Log("Auch!");
             knockingBack = true;
 
@@ -229,7 +239,7 @@ public class PhiroMovement : MonoBehaviour {
 
     }
 
-    IEnumerator KnockCooldown()
+    public IEnumerator KnockCooldown()
     {
         float timer = 0.5f;
         while((timer -= Time.deltaTime) > 0)

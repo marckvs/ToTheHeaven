@@ -17,6 +17,7 @@ public class MovimientoVolador : MonoBehaviour {
     private float patrullaX, patrullaY;
     private bool persiguiendo;
     private float absVel;
+    private bool tocado;
 
     // Desplazamiento en eje X
 
@@ -25,6 +26,7 @@ public class MovimientoVolador : MonoBehaviour {
         anim = GetComponent<Animator>();
         atacando = false;
         persiguiendo = false;
+        tocado = false;
         i = 0;
         patrullaX = puntoC.position.x;
         patrullaY = puntoC.position.y;
@@ -65,12 +67,14 @@ public class MovimientoVolador : MonoBehaviour {
 
         else if (persiguiendo)  // Perseguir a Phiro
         {
-            if (i++ >= 30) perseguir (Phiro.position.x, Phiro.position.y, absVel*3);
-            if (i++ >= 120)
-            {
-                anim.SetTrigger("Regresa_Patrulla");
-                persiguiendo = false;
-            }              
+                if (i >= 15) perseguir(Phiro.position.x, Phiro.position.y, absVel * 3);
+                if (i >= 60 || tocado)
+                {
+                    anim.SetTrigger("Regresa_Patrulla");
+                    persiguiendo = false;
+                    tocado = false;
+                }
+                i++;
         }
 
         else    // Regresar a patrulla
@@ -139,5 +143,10 @@ public class MovimientoVolador : MonoBehaviour {
             atacando = true;
             persiguiendo = true;
         }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Phiro") tocado = true;
     }
 }

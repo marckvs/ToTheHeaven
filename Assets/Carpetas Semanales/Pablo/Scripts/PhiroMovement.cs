@@ -36,6 +36,9 @@ public class PhiroMovement : MonoBehaviour {
     public float distance_max = 1f;//DISTANCIA MAXIMA
     public float plat_height = 1f;
     float x_axis;
+    //ANIMATION
+    private AnimacionsPhiro anim;
+    public bool canClimb;
 
     //ENEMY COLLISION
     public Vector2 knockbackForce = new Vector2(5000, 10000);
@@ -77,6 +80,7 @@ public class PhiroMovement : MonoBehaviour {
         dash_duration_BK = dashDuration;
         dash_cooldown_BK = dash_cooldown;
         dashState = DashState.Ready;
+        anim = this.GetComponent<AnimacionsPhiro>();
 
     }
     public void Reset()
@@ -167,7 +171,7 @@ public class PhiroMovement : MonoBehaviour {
             //Debug.Log("Posicion en Y: " + hitDistance);
             if(hitDistance > Mathf.NegativeInfinity)
             {
-                StartCoroutine(Climb(hitDistance, plat_height));
+                StartCoroutine(WaitForClimb(hitDistance, plat_height));
             }
             else
             {
@@ -312,11 +316,13 @@ public class PhiroMovement : MonoBehaviour {
         if (hit.collider != null && hit.collider.tag == "Plat_Yellow")
         {
             grounded = false;
+            canClimb = true;
             Debug.Log("Ha colisionado");
             return hit.point.y;
         }
         else
         {
+            canClimb = false;
             Debug.Log("No ha colisionado");
             return Mathf.NegativeInfinity;
         }
@@ -332,4 +338,18 @@ public class PhiroMovement : MonoBehaviour {
         _phiroRGD.gravityScale = 4f;
         _phiroRGD.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
     }
+    
+    public IEnumerator WaitForClimb(float distance, float platformHeight)
+    {
+        float timer = 0.7f;
+        while ((timer -= Time.deltaTime) > 0)
+        {
+            Debug.Log("climbing");
+            yield return null;
+        }
+        Debug.Log("HA FINALIZADO WAIT FOR CLIMB");
+        StartCoroutine(Climb(distance, platformHeight));
+        yield return null;
+    }
+
 }

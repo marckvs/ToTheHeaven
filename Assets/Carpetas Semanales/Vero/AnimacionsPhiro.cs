@@ -11,18 +11,21 @@ public class AnimacionsPhiro : MonoBehaviour
     private Rigidbody2D _PhiroRGD;
     private bool running = false;
     private bool agachado = false;
+    private PhiroMovement pm;
+    public bool climbing = false;
 
 
     // Use this for initialization
     void Start()
     {
         _PhiroRGD = GetComponent<Rigidbody2D>();
+        pm = this.GetComponent<PhiroMovement>();
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-
+        climbing = false;
         float xvel = _PhiroRGD.velocity.x;
         bool stairs = PhiroMovement.onStairs;
 
@@ -93,9 +96,11 @@ public class AnimacionsPhiro : MonoBehaviour
 
         //subir plataforma ("saltar")
 
-        if (Input.GetKeyDown(KeyCode.Space) && stairs == false && agachado == false && running == false)
+        if (Input.GetKeyDown(KeyCode.Space) && stairs == false && agachado == false && running == false && pm.canClimb)
         {
             phiroAnims.SetTrigger("estirabrazos");
+            StartCoroutine(tiempoEstirarBazos());
+
 
            /* if (PhiroMovement.subeplataforma)
             {
@@ -111,8 +116,15 @@ public class AnimacionsPhiro : MonoBehaviour
         Debug.Log("Flip");
         transform.localPosition = _PhiroRGD.transform.position;
         phiroTransform.localScale = Vector3.Scale(phiroTransform.localScale, new Vector3(-1, 1, 1));
+    }
 
-
+    IEnumerator tiempoEstirarBazos()
+    {
+        float timer = 0.7f;
+        while ((timer -= Time.deltaTime) > 0) yield return null;
+        climbing = true;
+        Debug.Log("climbing = true");
+        phiroAnims.SetTrigger("subir_plataforma");
     }
 }
 

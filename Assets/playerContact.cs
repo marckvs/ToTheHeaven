@@ -6,7 +6,8 @@ public class playerContact : MonoBehaviour {
 
     public Light lightBall;
     public bool reducir;
-    public float lightIntensityMax=10;
+    public float lightIntensityMax = 10;
+    public float lightIntensityMin = 7;
 
 	// Use this for initialization
 	void Start ()
@@ -22,19 +23,19 @@ public class playerContact : MonoBehaviour {
             reducir = true;
         }
 
-        if (lightBall.intensity == 0)
+        if (lightBall.intensity < lightIntensityMin)
         {
             reducir = false;
         }
 
         if (reducir)
         {
-            lightBall.intensity -= 0.1f;
+            lightBall.intensity -= 0.05f;
         }
 
         if (!reducir)
         {
-            lightBall.intensity += 0.1f;
+            lightBall.intensity += 0.05f;
         }
     }
 

@@ -37,7 +37,7 @@ namespace GM
 
         void SetInitialReferences()
         {
-            gameManagerMaster = GetComponent<GameManager_Master>();
+            gameManagerMaster = GameManager_Master.GetInstance();
         }
 
         void CheckForMenuToggleRequest()

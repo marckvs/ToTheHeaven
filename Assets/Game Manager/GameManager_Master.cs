@@ -8,6 +8,18 @@ namespace GM
     public class GameManager_Master : MonoBehaviour
     {
 
+        private static GameManager_Master instance = null;
+
+        public static GameManager_Master GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = GameObject.FindObjectOfType<GameManager_Master>();
+            }
+
+            return instance;
+        }
+
         public delegate void GameManagerEventHandler();
         public event GameManagerEventHandler MenuToggleEvent;
         public event GameManagerEventHandler RestartLevelEvent;

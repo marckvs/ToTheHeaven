@@ -11,6 +11,8 @@ namespace GM
     {
 
         private GameManager_Master gameManagerMaster;
+        [SerializeField]
+        private GameObject menuPausa;
         void OnEnable()
         {
             Debug.Log("Menu");
@@ -26,12 +28,13 @@ namespace GM
 
         void SetInitialReferences()
         {
-            gameManagerMaster = GetComponent<GameManager_Master>();
+            gameManagerMaster = GameManager_Master.GetInstance();
         }
 
         void GoToMenuScene()
         {
             SceneManager.LoadScene(0);
+            menuPausa.SetActive(false);
             Time.timeScale = 1;
         }
 

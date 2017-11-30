@@ -87,9 +87,11 @@ public class PhiroMovement : MonoBehaviour {
     {
         knockingBack = false;
     }
-
+    
     private void Update()
     {
+
+        Debug.Log(anim.GetAgachado());
         if (Input.GetKeyDown(KeyCode.S) && !onStairs)
         {
             Crouch();
@@ -118,13 +120,12 @@ public class PhiroMovement : MonoBehaviour {
     void FixedUpdate () {
         if (zip_line)
         {
-            Vector3 f = _phiroRGD.transform.forward;
-            Debug.Log(f);
-            _phiroRGD.velocity = new Vector2(2, 0);
+            if (anim.GetFacing()) _phiroRGD.velocity = new Vector2(2, 0);
+            else _phiroRGD.velocity = new Vector2(-2, 0);
         }
         else
         {
-            if (!knockingBack)
+            if (!knockingBack && !anim.GetAgachado())
             {
                 x_axis = Input.GetAxis("Horizontal") * Time.fixedDeltaTime * velocity;
                 _phiroRGD.velocity = new Vector2(x_axis + dash_force, _phiroRGD.velocity.y);
@@ -134,15 +135,13 @@ public class PhiroMovement : MonoBehaviour {
         switch (dashState)
         {
             case DashState.Ready:
-                if (Input.GetKey(KeyCode.E) && !knockingBack)
+                if (Input.GetKey(KeyCode.LeftShift) && !knockingBack)
                 {
-                    dash_force = dash_speed;
+                    if(anim.GetFacing()) dash_force = dash_speed;
+                    else dash_force = -dash_speed;
+
                     dashState = DashState.Dashing;
-                }
-                if (Input.GetKey(KeyCode.Q) && !knockingBack)
-                {
-                    dash_force = -dash_speed;
-                    dashState = DashState.Dashing;
+              
                 }
                 break;
             case DashState.Dashing:
@@ -351,5 +350,8 @@ public class PhiroMovement : MonoBehaviour {
         StartCoroutine(Climb(distance, platformHeight));
         yield return null;
     }
+
+    public bool GetZip() { return zip_line; }
+    public bool GetStairs() { return onStairs; }
 
 }

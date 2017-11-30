@@ -6,7 +6,7 @@ public class restorePlatforms : MonoBehaviour {
 
 
     [SerializeField]
-    private GameObject P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11,P12,P13;
+    private GameObject P1,P2,P3,P4,P5,P6,P7,P8,P9,P10,P11/*,P12,P13*/;
 
     private bool p1_invisible = false;
     private bool p2_invisible = false;
@@ -19,8 +19,8 @@ public class restorePlatforms : MonoBehaviour {
     private bool p9_invisible = false;
     private bool p10_invisible = false;
     private bool p11_invisible = false;
-    private bool p12_invisible = false;
-    private bool p13_invisible = false;
+    /*private bool p12_invisible = false;
+    private bool p13_invisible = false;*/
 
     [SerializeField]
     private float timeToAppear;
@@ -93,7 +93,7 @@ public class restorePlatforms : MonoBehaviour {
              p11_invisible = true;
              StartCoroutine(visibilityTrue11());
          }
-         if (P12.activeInHierarchy == false && p12_invisible == false)
+         /*if (P12.activeInHierarchy == false && p12_invisible == false)
          {
              Debug.Log("no activo");
              p12_invisible = true;
@@ -104,7 +104,7 @@ public class restorePlatforms : MonoBehaviour {
              Debug.Log("no activo");
              p13_invisible = true;
              StartCoroutine(visibilityTrue13());
-         }
+         }*/
     }
 
     IEnumerator visibilityTrue()
@@ -177,7 +177,7 @@ public class restorePlatforms : MonoBehaviour {
         P11.SetActive(true);
         p11_invisible = false;
     }
-    IEnumerator visibilityTrue12()
+   /* IEnumerator visibilityTrue12()
     {
         yield return new WaitForSeconds(timeToAppear);
         P12.SetActive(true);
@@ -188,7 +188,7 @@ public class restorePlatforms : MonoBehaviour {
         yield return new WaitForSeconds(timeToAppear);
         P13.SetActive(true);
         p13_invisible = false;
-    }
+    }*/
 
 
 

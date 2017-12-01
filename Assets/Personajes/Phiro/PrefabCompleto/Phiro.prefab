@@ -962,6 +962,8 @@ MonoBehaviour:
   phiroAnims: {fileID: 95388959158937318}
   facingRight: 1
   phiroTransform: {fileID: 4655036851982262}
+  climbing: 0
+  subir: 0
 --- !u!114 &114175424871116726
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1336,11 +1338,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7fcf6176550bb243ac3ccd86232a9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grounded: 1
   zip_line: 0
   crouching: 0
   velocity: 500
   distance_max: 4
   plat_height: 0.5
+  canClimb: 0
   knockbackForce: {x: 5000, y: 10000}
   hit: 0
   hitParticles: {fileID: 198411508750521360, guid: 3e8e4af0bf39cb448a8ca5fd50f3c477,

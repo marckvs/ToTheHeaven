@@ -35,7 +35,7 @@ public class AnimacionsPhiro : MonoBehaviour
             phiroAnims.SetTrigger("idle");
         }
 
-        if (Input.GetKeyDown(KeyCode.D) && !pm.GetZip() && !pm.GetStairs())
+        if (Input.GetKey(KeyCode.D) && !pm.GetZip() && !pm.GetStairs() && Input.GetKey(KeyCode.A)== false)
         {
             if (!facingRight)
             {
@@ -47,7 +47,7 @@ public class AnimacionsPhiro : MonoBehaviour
             running = true;
 
         }
-        if (Input.GetKeyDown(KeyCode.A) && !pm.GetZip() && !pm.GetStairs())
+        if (Input.GetKey(KeyCode.A) && !pm.GetZip() && !pm.GetStairs() && Input.GetKey(KeyCode.D) == false)
         {
             if (facingRight)
             {

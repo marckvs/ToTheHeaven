@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 23599596}
   m_Layer: 0
   m_Name: plataformas_tipos_8 (3)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 40609398}
   m_Layer: 0
   m_Name: plataformas_tipos_7 (6)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1521,7 +1521,7 @@ GameObject:
   - component: {fileID: 240374265}
   m_Layer: 0
   m_Name: plataformas_tipos_3 (4)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2681,7 +2681,7 @@ GameObject:
   - component: {fileID: 382849883}
   m_Layer: 0
   m_Name: plataformas_tipos_7 (2)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2993,7 +2993,7 @@ GameObject:
   - component: {fileID: 463130981}
   m_Layer: 0
   m_Name: plataformas_tipos_14 (2)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3118,7 +3118,7 @@ GameObject:
   - component: {fileID: 482408422}
   m_Layer: 0
   m_Name: plataformas_tipos_14 (4)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3397,7 +3397,7 @@ GameObject:
   - component: {fileID: 506363234}
   m_Layer: 0
   m_Name: plataformas_tipos_8 (4)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3691,7 +3691,7 @@ GameObject:
   - component: {fileID: 562164044}
   m_Layer: 0
   m_Name: plataformas_tipos_7
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3888,6 +3888,7 @@ GameObject:
   - component: {fileID: 585239658}
   - component: {fileID: 585239657}
   - component: {fileID: 585239656}
+  - component: {fileID: 585239659}
   m_Layer: 0
   m_Name: plataformas_tipos_5 (18)
   m_TagString: Plat_Yellow
@@ -3999,6 +4000,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &585239659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 585239654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397b2cfab71c62b44a0f435b1733a5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yVel: 0.04
+  yMaxDistance: 11.7
+  yMinDistance: 0
 --- !u!1 &595245884
 GameObject:
   m_ObjectHideFlags: 0
@@ -4280,7 +4295,7 @@ GameObject:
   - component: {fileID: 627572264}
   m_Layer: 0
   m_Name: plataformas_tipos_3 (11)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4547,7 +4562,7 @@ GameObject:
   - component: {fileID: 652211109}
   m_Layer: 0
   m_Name: plataformas_tipos_3 (8)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4560,7 +4575,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 652211107}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.65, y: 0.52, z: 0}
+  m_LocalPosition: {x: -12.65, y: 0.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1651923399}
@@ -4678,7 +4693,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 654894569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.4, y: 18.05, z: 0.016410682}
+  m_LocalPosition: {x: -19.1, y: 17.04, z: 0.016410682}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5047,7 +5062,7 @@ GameObject:
   - component: {fileID: 710581466}
   m_Layer: 0
   m_Name: plataformas_tipos_3 (12)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5195,6 +5210,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1011751262998642, guid: 0bd251201fac0c54ba0ef47d6d68ebd9, type: 2}
+      propertyPath: m_TagString
+      value: Plat_Red
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0bd251201fac0c54ba0ef47d6d68ebd9, type: 2}
   m_IsPrefabParent: 0
@@ -5249,7 +5268,7 @@ GameObject:
   - component: {fileID: 840868843}
   m_Layer: 0
   m_Name: plataformas_tipos_14 (5)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6640,7 +6659,7 @@ GameObject:
   - component: {fileID: 1030499070}
   m_Layer: 0
   m_Name: plataformas_tipos_7 (4)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6748,7 +6767,7 @@ GameObject:
   - component: {fileID: 1044481336}
   m_Layer: 0
   m_Name: plataformas_tipos_3 (5)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7239,7 +7258,7 @@ GameObject:
   - component: {fileID: 1066048199}
   m_Layer: 0
   m_Name: plataformas_tipos_7 (5)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7671,7 +7690,7 @@ GameObject:
   - component: {fileID: 1116816409}
   m_Layer: 0
   m_Name: plataformas_tipos_3 (1)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7926,7 +7945,7 @@ GameObject:
   - component: {fileID: 1167672691}
   m_Layer: 0
   m_Name: plataformas_tipos_14
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8259,7 +8278,7 @@ GameObject:
   - component: {fileID: 1194900384}
   m_Layer: 0
   m_Name: plataformas_tipos_7 (8)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8893,7 +8912,7 @@ GameObject:
   - component: {fileID: 1238809650}
   m_Layer: 0
   m_Name: plataformas_tipos_7 (3)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9119,7 +9138,7 @@ GameObject:
   - component: {fileID: 1251732195}
   m_Layer: 0
   m_Name: plataformas_tipos_3 (10)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9613,6 +9632,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1458321682154030, guid: 1c04fd8f113d9134ebc54c4c69698fd9, type: 2}
+      propertyPath: m_TagString
+      value: Plat_Red
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1c04fd8f113d9134ebc54c4c69698fd9, type: 2}
   m_IsPrefabParent: 0
@@ -9629,7 +9652,7 @@ GameObject:
   - component: {fileID: 1337421609}
   m_Layer: 0
   m_Name: plataformas_tipos_7 (7)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10470,7 +10493,7 @@ GameObject:
   - component: {fileID: 1472750152}
   m_Layer: 0
   m_Name: plataformas_tipos_3 (3)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10717,7 +10740,7 @@ GameObject:
   - component: {fileID: 1478301694}
   m_Layer: 0
   m_Name: plataformas_tipos_3
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11237,7 +11260,7 @@ GameObject:
   - component: {fileID: 1549545501}
   m_Layer: 0
   m_Name: plataformas_tipos_7 (9)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11340,7 +11363,7 @@ GameObject:
   - component: {fileID: 1565132437}
   m_Layer: 0
   m_Name: plataformas_tipos_14 (1)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11631,6 +11654,71 @@ GameObject:
   m_PrefabParentObject: {fileID: 1458321682154030, guid: 1c04fd8f113d9134ebc54c4c69698fd9,
     type: 2}
   m_PrefabInternal: {fileID: 1332541705}
+--- !u!1 &1620598960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1620598962}
+  - component: {fileID: 1620598961}
+  m_Layer: 0
+  m_Name: Directional light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1620598961
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1620598960}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1620598962
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1620598960}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 8, y: 30, z: -24.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1625539605
 GameObject:
   m_ObjectHideFlags: 0
@@ -11645,7 +11733,7 @@ GameObject:
   - component: {fileID: 1625539607}
   m_Layer: 0
   m_Name: plataformas_tipos_8 (2)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13491,7 +13579,7 @@ GameObject:
   - component: {fileID: 1998582554}
   m_Layer: 0
   m_Name: plataformas_tipos_14 (3)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14209,7 +14297,7 @@ GameObject:
   - component: {fileID: 2112239615}
   m_Layer: 0
   m_Name: plataformas_tipos_7 (1)
-  m_TagString: Untagged
+  m_TagString: Plat_Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14336,6 +14424,10 @@ Prefab:
     - target: {fileID: 4774645945379526, guid: c584b2ffa1e20604ba0043852a240de5, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1334674254638366, guid: c584b2ffa1e20604ba0043852a240de5, type: 2}
+      propertyPath: m_TagString
+      value: Plat_Red
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c584b2ffa1e20604ba0043852a240de5, type: 2}

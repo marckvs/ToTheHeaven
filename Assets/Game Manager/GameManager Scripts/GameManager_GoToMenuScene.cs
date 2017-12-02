@@ -33,7 +33,7 @@ namespace GM
 
         void GoToMenuScene()
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             menuPausa.SetActive(false);
             Time.timeScale = 1;
         }

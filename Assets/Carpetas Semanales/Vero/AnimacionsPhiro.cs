@@ -30,9 +30,10 @@ public class AnimacionsPhiro : MonoBehaviour
         float xvel = _PhiroRGD.velocity.x;
         bool stairs = PhiroMovement.onStairs;
 
-        if (xvel == 0 && running == false && stairs == false)
+        if (xvel == 0 && running == false && stairs == false && agachado == false)
         {
             phiroAnims.SetTrigger("idle");
+            phiroAnims.SetBool("levantarse", false);
         }
 
         if (Input.GetKey(KeyCode.D) && !pm.GetZip() && !pm.GetStairs() && Input.GetKey(KeyCode.A)== false)
@@ -71,11 +72,22 @@ public class AnimacionsPhiro : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S) && stairs == false )
         {
             phiroAnims.SetTrigger("agacharse");
-            Debug.Log("edu");
             agachado = true;
             StartCoroutine(EsperandoAnimacionAgachado());
+            
         }
 
+        if(Input.GetKey(KeyCode.S) && agachado)
+        {
+            phiroAnims.SetTrigger("agacharse_mantener");
+        }
+
+
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            phiroAnims.SetBool("levantarse", true);
+            agachado = false;
+        }
         //subir escaleras
 
         if (Input.GetKeyDown(KeyCode.W) && stairs == true)
@@ -102,12 +114,6 @@ public class AnimacionsPhiro : MonoBehaviour
         {
             phiroAnims.SetTrigger("estirabrazos");
             StartCoroutine(tiempoEstirarBazos());
-
-
-           /* if (PhiroMovement.subeplataforma)
-            {
-                phiroAnims.SetBool("hasubido", true);
-            }*/
 
         }
     }

@@ -69,33 +69,29 @@ public class AnimacionsPhiro : MonoBehaviour
         }
 
         //agacharse
-        if (Input.GetKeyDown(KeyCode.S) && stairs == false )
+        if (Input.GetKeyDown(KeyCode.S) && stairs == false && phiroAnims.GetBool("agacharse_mantener") == false && phiroAnims.GetBool("levantarse") == false && pm.canClimb == false)
         {
-            phiroAnims.SetTrigger("agacharse");
+            phiroAnims.SetBool("agacharse", true);
             agachado = true;
-            StartCoroutine(EsperandoAnimacionAgachado());
-            
-        }
-
-        if(Input.GetKey(KeyCode.S) && agachado)
-        {
-            phiroAnims.SetTrigger("agacharse_mantener");
+            phiroAnims.SetBool("agacharse_mantener", true);
         }
 
 
         if (Input.GetKeyUp(KeyCode.S))
         {
+            phiroAnims.SetBool("agacharse_mantener", false);
+            phiroAnims.SetBool("agacharse", false);
             phiroAnims.SetBool("levantarse", true);
             agachado = false;
         }
         //subir escaleras
 
-        if (Input.GetKeyDown(KeyCode.W) && stairs == true)
+        if (Input.GetKey(KeyCode.W) && stairs == true)
         {
             phiroAnims.SetBool("subir", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.S) && stairs == true)
+        if (Input.GetKey(KeyCode.S) && stairs == true)
         {
             phiroAnims.SetBool("subir", true);
         }
@@ -112,6 +108,7 @@ public class AnimacionsPhiro : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && stairs == false && agachado == false && running == false && pm.canClimb)
         {
+            phiroAnims.SetBool("agacharse_mantener", false);
             phiroAnims.SetTrigger("estirabrazos");
             StartCoroutine(tiempoEstirarBazos());
 

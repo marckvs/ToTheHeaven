@@ -218,11 +218,13 @@ public class PhiroMovement : MonoBehaviour {
     private void Crouch()
     {
         crouching = true;
-        _phiroCOLL.size = new Vector2(_phiroCOLL.size.x, _phiroCOLL.size.y * 0.65f);
+        _phiroCOLL.size = new Vector2(_phiroCOLL.size.x, _phiroCOLL.size.y * 0.65f); //sirve para cogelar el movimiento de Phiroq
+        _phiroRGD.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
     }
     private void StandUp()
     {
         crouching = false;
+        _phiroRGD.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
         _phiroCOLL.size = new Vector2(_phiroCOLL.size.x, colliderSizeBackup);
     }
 

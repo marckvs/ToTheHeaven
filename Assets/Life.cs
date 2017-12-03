@@ -41,8 +41,6 @@ public class Life : MonoBehaviour {
 	}
 
 
-
-
     public void SubstractLife()
     {
         if(lifestat == PhiroLifeState.Full)

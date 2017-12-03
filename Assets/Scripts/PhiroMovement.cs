@@ -20,49 +20,60 @@ public enum TipoPlataformas
 [RequireComponent(typeof(Collider2D))]
 public class PhiroMovement : MonoBehaviour {
 
-    public bool grounded = true;
-
-    public static bool onStairs;
-    public bool zip_line;
     private Rigidbody2D _phiroRGD;
     private CapsuleCollider2D _phiroCOLL;
+
+    [Header("Movement")]
+    public bool grounded = true;
+    public static bool onStairs;
+    public bool zip_line;
     private float colliderSizeBackup, hitDistance;
     private bool finished;
-
-
     public bool crouching;
     [Range(500, 5000)]
     public float velocity;
     public float distance_max = 1f;//DISTANCIA MAXIMA
     public float plat_height = 1f;
     float x_axis;
+    [Space(10)]
+
     //ANIMATION
+    [Header("Animation Integration")]
     private AnimacionsPhiro anim;
     public bool canClimb;
+    [Space(10)]
 
     //ENEMY COLLISION
+    [Header("Enemy Hit Variables")]
     public Vector2 knockbackForce = new Vector2(5000, 10000);
     private Vector2 inverseKnockbackForce;
     private bool knockingBack;
     public bool hit;
+    public bool invencible = false;
     //EffectsOnCollision
     public ParticleSystem hitParticles;
+    [Space(10)]
 
     //DASH
+    [Header("Dash Variables")]
     public DashState dashState;
     public float dashDuration = 0.2f;
     public float dash_cooldown = 1f;
     public float dash_speed;
     private float dash_force = 0;
     private float dash_duration_BK, dash_cooldown_BK;
+    [Space(10)]
 
     //STAIRS
+    [Header("Stair Variables")]
     public bool stairsWithPlatform;
     public float stairs_speed;
     private float stairs_velocity;
     private float gravityStore;
+    [Space(10)]
 
     //LIGHTS
+    [Header("Lights")]
     public int light_counter = 0;
     public bool light_caught;
     public doorLightCounter doorLighCounterRef;
@@ -70,6 +81,7 @@ public class PhiroMovement : MonoBehaviour {
     void Start () {
         hitParticles = Instantiate(hitParticles);
         hitParticles.gameObject.SetActive(false);
+
         onStairs = false;
         stairsWithPlatform = false;
         light_caught = false;
@@ -81,11 +93,15 @@ public class PhiroMovement : MonoBehaviour {
         dash_cooldown_BK = dash_cooldown;
         dashState = DashState.Ready;
         anim = this.GetComponent<AnimacionsPhiro>();
+        doorLighCounterRef = GameObject.Find("DoorLightController").GetComponent<doorLightCounter>();
 
     }
     public void Reset()
     {
+        crouching = false;
         knockingBack = false;
+        canClimb = false;
+        //anim.phiroAnims.SetTrigger("idle");
     }
     
     private void Update()
@@ -117,6 +133,16 @@ public class PhiroMovement : MonoBehaviour {
 
 
     void FixedUpdate () {
+
+        if (invencible)
+        {
+            Physics2D.IgnoreLayerCollision(8, 9, true);
+        }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(8, 9, false);
+
+        }
         if (zip_line)
         {
             if (anim.GetFacing()) _phiroRGD.velocity = new Vector2(2, 0);
@@ -145,16 +171,23 @@ public class PhiroMovement : MonoBehaviour {
                 break;
             case DashState.Dashing:
                 dashDuration -= Time.deltaTime;
-                if(dashDuration < 0)
+                invencible = true;
+                
+                if (dashDuration < 0)
                 {
                     dash_force = 0;
-                    dashDuration = dash_duration_BK;
-                    dashState = DashState.Cooldown;
+                    if(dashDuration < -1)
+                    {
+                        invencible = false;
+                        dashDuration = dash_duration_BK;
+                        dashState = DashState.Cooldown;
+                    }
+
                 }
                 break;
             case DashState.Cooldown:
                 dash_cooldown -= Time.deltaTime;
-                if (dash_cooldown < 0)
+                if (dash_cooldown-1 < 0)
                 {
                     dash_cooldown = dash_cooldown_BK;
                     dashState = DashState.Ready;
@@ -165,8 +198,7 @@ public class PhiroMovement : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Space) && grounded)//Escalado
         {
-            hitDistance = PlatformChecker(distance_max);//HitDistance --> Altura a la que colisiona en Y
-            //Debug.Log("Posicion en Y: " + hitDistance);
+            hitDistance = PlatformChecker(distance_max);
             if(hitDistance > Mathf.NegativeInfinity)
             {
                 StartCoroutine(WaitForClimb(hitDistance, plat_height));
@@ -186,7 +218,7 @@ public class PhiroMovement : MonoBehaviour {
     private void Crouch()
     {
         crouching = true;
-        _phiroCOLL.size = new Vector2(_phiroCOLL.size.x, _phiroCOLL.size.y * 0.75f);
+        _phiroCOLL.size = new Vector2(_phiroCOLL.size.x, _phiroCOLL.size.y * 0.65f);
     }
     private void StandUp()
     {
@@ -219,31 +251,35 @@ public class PhiroMovement : MonoBehaviour {
         }
         if(collision.gameObject.tag == "Enemigo")
         {
-            hit = true;
-            Debug.Log("Auch!");
-            knockingBack = true;
+            if (!invencible)
+            {
+                hit = true;
+                Debug.Log("Auch!");
+                knockingBack = true;
 
-            ContactPoint2D pointOfCollision = collision.contacts[collision.contacts.Length/2];
-            hitParticles.gameObject.SetActive(false);
-            Vector2 pointToAddForce = pointOfCollision.point;
-            hitParticles.transform.position = pointToAddForce;
-            hitParticles.gameObject.SetActive(true);
-            if (pointOfCollision.normal.x > 0)
-            {
-                Debug.Log("Right");
-                _phiroRGD.AddForceAtPosition(knockbackForce, pointToAddForce);
-                Debug.Log("BackForce: " + knockbackForce);
+                ContactPoint2D pointOfCollision = collision.contacts[collision.contacts.Length / 2];
+                hitParticles.gameObject.SetActive(false);
+                Vector2 pointToAddForce = pointOfCollision.point;
+                hitParticles.transform.position = pointToAddForce;
+                hitParticles.gameObject.SetActive(true);
+                if (pointOfCollision.normal.x > 0)
+                {
+                    Debug.Log("Right");
+                    _phiroRGD.AddForceAtPosition(knockbackForce, pointToAddForce);
+                    Debug.Log("BackForce: " + knockbackForce);
+                }
+                else if (pointOfCollision.normal.x < 0)
+                {
+                    Debug.Log("Left");
+                    inverseKnockbackForce = new Vector2(-knockbackForce.x, knockbackForce.y);
+                    Debug.Log("BackForce: " + inverseKnockbackForce);
+                    _phiroRGD.AddForceAtPosition(inverseKnockbackForce, pointToAddForce);
+                }
+                Vector3 particlePosition = new Vector3(pointToAddForce.x, pointToAddForce.y, -5);
+                Debug.Log("Spawn de particulas en: " + particlePosition);
+                StartCoroutine(KnockCooldown());
             }
-            else if(pointOfCollision.normal.x < 0)
-            {
-                Debug.Log("Left");
-                inverseKnockbackForce = new Vector2(-knockbackForce.x, knockbackForce.y);
-                Debug.Log("BackForce: " + inverseKnockbackForce);
-                _phiroRGD.AddForceAtPosition(inverseKnockbackForce, pointToAddForce);
-            }
-            Vector3 particlePosition = new Vector3(pointToAddForce.x, pointToAddForce.y, -5);
-            Debug.Log("Spawn de particulas en: " + particlePosition);
-            StartCoroutine(KnockCooldown());
+
 
         }
 
@@ -338,11 +374,13 @@ public class PhiroMovement : MonoBehaviour {
     {      
         while (_phiroRGD.transform.position.y - 1 < distance + platformHeight)
         {
+            invencible = true;
             _phiroRGD.gravityScale = -1f;
             _phiroRGD.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             yield return null;
         }
         _phiroRGD.gravityScale = 4f;
+        invencible = false;
         _phiroRGD.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
     }
     

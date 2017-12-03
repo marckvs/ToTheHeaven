@@ -91,7 +91,6 @@ public class PhiroMovement : MonoBehaviour {
     private void Update()
     {
 
-        Debug.Log(anim.GetAgachado());
         if (Input.GetKeyDown(KeyCode.S) && !onStairs)
         {
             Crouch();

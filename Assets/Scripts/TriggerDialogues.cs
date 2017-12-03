@@ -5,15 +5,14 @@ using UnityEngine;
 public class TriggerDialogues : MonoBehaviour {
 
     public GameObject GO;
+    public GameObject PressF;
 
-    void OnTriggerEnter2D(Collider2D c)
+    void Start()
     {
-        if (c.gameObject.tag == "Phiro")
-        {
-            
-        }
+        PressF.SetActive(true);
     }
-	void OnTriggerStay2D(Collider2D c)
+
+    void OnTriggerStay2D(Collider2D c)
     {
         if (c.gameObject.tag == "Phiro" && Input.GetKeyDown(KeyCode.F)) 
         {

@@ -8,7 +8,7 @@ public class MovimientoVolador : MonoBehaviour {
     public Transform puntoA;
     public Transform puntoB;
     public Transform puntoC;
-    public Transform Phiro;
+    private Transform Phiro;
 
     private Animator anim;
     private float posMin, posMax;
@@ -19,10 +19,13 @@ public class MovimientoVolador : MonoBehaviour {
     private float absVel;
     private bool tocado;
 
+    
+
     // Desplazamiento en eje X
 
     void Start()
     {
+        Phiro = GameObject.FindGameObjectWithTag("Phiro").transform;
         anim = GetComponent<Animator>();
         atacando = false;
         persiguiendo = false;

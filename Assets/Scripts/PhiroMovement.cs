@@ -199,7 +199,13 @@ public class PhiroMovement : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow")
         {
-            grounded = true;
+            ContactPoint2D pointOfCollision = collision.contacts[collision.contacts.Length / 2];
+            if (pointOfCollision.normal.y > 0.8f)
+            {
+                Debug.Log("Ground Collision Normal: " + pointOfCollision.normal);
+                grounded = true;
+
+            }
         }
 
         if (collision.gameObject.tag == "zip_line")
@@ -306,11 +312,14 @@ public class PhiroMovement : MonoBehaviour {
     {
         Vector3 posToRay = new Vector3(_phiroRGD.transform.position.x, _phiroRGD.transform.position.y + 1.3f, _phiroRGD.transform.position.z);
         RaycastHit2D hit = Physics2D.Raycast(posToRay, _phiroRGD.transform.up, distance);
+
+        //<DEBUGS>----------------------------------------------------------------------------------------------------
         Debug.DrawLine(posToRay,  hit.point, Color.red,100);
         Debug.Log("ChildPosition: " + posToRay);
         Debug.Log("Direction: " + _phiroRGD.transform.up);
         Debug.Log("Distance: " + distance);
         Debug.DrawLine(posToRay, new Vector3(posToRay.x, posToRay.y + 10, posToRay.z));
+        //</DEBUGS>---------------------------------------------------------------------------------------------------
 
         if (hit.collider != null && hit.collider.tag == "Plat_Yellow")
         {

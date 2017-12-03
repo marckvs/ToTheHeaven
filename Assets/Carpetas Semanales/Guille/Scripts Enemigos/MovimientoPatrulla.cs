@@ -7,7 +7,7 @@ public class MovimientoPatrulla : MonoBehaviour {
     public float velocidad;
     public Transform puntoA;
     public Transform puntoB;
-    public Transform Phiro;
+    private Transform Phiro;
     public bool Mirar_a_Phiro_en_Patrulla;
 
     private Animator anim;
@@ -21,6 +21,7 @@ public class MovimientoPatrulla : MonoBehaviour {
 
     void Start()
     {
+        Phiro = GameObject.FindGameObjectWithTag("Phiro").transform;
         anim = GetComponent<Animator>();
         atacando = false;
         i = 0;

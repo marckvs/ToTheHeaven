@@ -68,7 +68,7 @@ public class AnimacionsPhiro : MonoBehaviour
         }
 
         //agacharse
-        if (Input.GetKeyDown(KeyCode.S) && stairs == false  && pm.canClimb == false)
+        if (Input.GetKey(KeyCode.S) && stairs == false)
         {
             phiroAnims.SetBool("agacharse", true);
             phiroAnims.SetBool("levantarse", false);
@@ -104,7 +104,7 @@ public class AnimacionsPhiro : MonoBehaviour
         //subir plataforma ("saltar")
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && stairs == false && agachado == false && running == false && pm.canClimb)
+        if (Input.GetKeyDown(KeyCode.Space) && stairs == false && running == false && pm.canClimb)
         {
             phiroAnims.SetBool("agacharse_mantener", false);
             phiroAnims.SetTrigger("estirabrazos");

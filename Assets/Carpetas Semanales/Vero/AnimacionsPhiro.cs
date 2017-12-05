@@ -33,7 +33,6 @@ public class AnimacionsPhiro : MonoBehaviour
         if (xvel == 0 && running == false && stairs == false && agachado == false)
         {
             phiroAnims.SetTrigger("idle");
-            phiroAnims.SetBool("levantarse", false);
         }
 
         if (Input.GetKey(KeyCode.D) && !pm.GetZip() && !pm.GetStairs() && Input.GetKey(KeyCode.A)== false)
@@ -69,17 +68,16 @@ public class AnimacionsPhiro : MonoBehaviour
         }
 
         //agacharse
-        if (Input.GetKeyDown(KeyCode.S) && stairs == false && phiroAnims.GetBool("agacharse_mantener") == false && phiroAnims.GetBool("levantarse") == false && pm.canClimb == false)
+        if (Input.GetKeyDown(KeyCode.S) && stairs == false  && pm.canClimb == false)
         {
             phiroAnims.SetBool("agacharse", true);
+            phiroAnims.SetBool("levantarse", false);
             agachado = true;
-            phiroAnims.SetBool("agacharse_mantener", true);
         }
 
 
         if (Input.GetKeyUp(KeyCode.S))
-        {
-            phiroAnims.SetBool("agacharse_mantener", false);
+        { 
             phiroAnims.SetBool("agacharse", false);
             phiroAnims.SetBool("levantarse", true);
             agachado = false;

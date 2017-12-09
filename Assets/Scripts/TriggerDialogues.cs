@@ -14,7 +14,7 @@ public class TriggerDialogues : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D c)
     {
-        if (c.gameObject.tag == "Phiro" && Input.GetKeyDown(KeyCode.F)) 
+        if(c.gameObject.tag == "Phiro" && Input.GetKeyDown(KeyCode.F)) 
         {
             GO.SetActive(true);
         }

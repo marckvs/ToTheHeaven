@@ -22,7 +22,7 @@ public class doorLightCounter : MonoBehaviour {
 
     public void setActiveLight(int counter)
     {
-        if(counter <= 8)
+        if(counter <= lightList.Length)
             lightList[counter - 1].SetActive(true);
     }
 }

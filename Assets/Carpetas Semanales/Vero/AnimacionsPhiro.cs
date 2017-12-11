@@ -47,6 +47,18 @@ public class AnimacionsPhiro : MonoBehaviour
             running = true;
 
         }
+
+        if (pm.zip_line == true)
+        {
+            phiroAnims.SetBool("tirolina", true);
+        }
+
+        if (pm.zip_line == false)
+        {
+            phiroAnims.SetBool("tirolina", false);
+        }
+
+
         if (Input.GetKey(KeyCode.A) && !pm.GetZip() && !pm.GetStairs() && Input.GetKey(KeyCode.D) == false)
         {
             if (facingRight)
@@ -110,6 +122,8 @@ public class AnimacionsPhiro : MonoBehaviour
             StartCoroutine(tiempoEstirarBazos());
 
         }
+
+        
     }
 
     IEnumerator EsperandoAnimacionAgachado()

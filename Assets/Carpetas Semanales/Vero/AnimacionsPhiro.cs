@@ -58,7 +58,6 @@ public class AnimacionsPhiro : MonoBehaviour
             phiroAnims.SetBool("running", true);
             running = true;
 
-
         }
 
         if (Input.GetKey(KeyCode.D)== false && Input.GetKey(KeyCode.A)==false)

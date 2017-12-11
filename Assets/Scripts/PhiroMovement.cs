@@ -357,20 +357,24 @@ public class PhiroMovement : MonoBehaviour {
         Debug.Log("Distance: " + distance);
         Debug.DrawLine(posToRay, new Vector3(posToRay.x, posToRay.y + 10, posToRay.z));
         //</DEBUGS>---------------------------------------------------------------------------------------------------
+        if(!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
+        {
+            if (hit.collider != null && hit.collider.tag == "Plat_Yellow" &&  hit.collider.tag != "UnderStairs" && !stairsWithPlatform)
+            {
+                grounded = false;
+                canClimb = true;
+                Debug.Log("Ha colisionado");
+                return hit.point.y;
+            }
+            else
+            {
+                canClimb = false;
+                Debug.Log("No ha colisionado");
+                return Mathf.NegativeInfinity;
+            }
+        }
+        return Mathf.NegativeInfinity;
 
-        if (hit.collider != null && hit.collider.tag == "Plat_Yellow")
-        {
-            grounded = false;
-            canClimb = true;
-            Debug.Log("Ha colisionado");
-            return hit.point.y;
-        }
-        else
-        {
-            canClimb = false;
-            Debug.Log("No ha colisionado");
-            return Mathf.NegativeInfinity;
-        }
     }
     IEnumerator Climb(float distance, float platformHeight)
     {      

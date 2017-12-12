@@ -62,6 +62,8 @@ public class PhiroMovement : MonoBehaviour {
     public float dash_speed;
     private float dash_force = 0;
     private float dash_duration_BK, dash_cooldown_BK;
+    public ParticleSystem coolDownPs;
+    ParticleSystem.MainModule mainP;
     [Space(10)]
 
     //STAIRS
@@ -81,6 +83,7 @@ public class PhiroMovement : MonoBehaviour {
     void Start () {
         hitParticles = Instantiate(hitParticles);
         hitParticles.gameObject.SetActive(false);
+        mainP = coolDownPs.main;
 
         onStairs = false;
         stairsWithPlatform = false;
@@ -160,9 +163,11 @@ public class PhiroMovement : MonoBehaviour {
         switch (dashState)
         {
             case DashState.Ready:
+                
                 if (Input.GetKey(KeyCode.LeftShift) && !knockingBack)
                 {
-                    if(anim.GetFacing()) dash_force = dash_speed;
+                    mainP.startColor = new Color(0, 0, 150, 255);
+                    if (anim.GetFacing()) dash_force = dash_speed;
                     else dash_force = -dash_speed;
 
                     dashState = DashState.Dashing;
@@ -172,13 +177,13 @@ public class PhiroMovement : MonoBehaviour {
             case DashState.Dashing:
                 dashDuration -= Time.deltaTime;
                 invencible = true;
-                
                 if (dashDuration < 0)
                 {
                     dash_force = 0;
                     if(dashDuration < -1)
                     {
                         invencible = false;
+                        
                         dashDuration = dash_duration_BK;
                         dashState = DashState.Cooldown;
                     }
@@ -191,6 +196,7 @@ public class PhiroMovement : MonoBehaviour {
                 {
                     dash_cooldown = dash_cooldown_BK;
                     dashState = DashState.Ready;
+                    mainP.startColor = new Color(255, 69, 0, 255);
                 }
                 break;
         }

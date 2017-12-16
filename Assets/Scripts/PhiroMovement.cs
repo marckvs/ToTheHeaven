@@ -350,7 +350,15 @@ public class PhiroMovement : MonoBehaviour {
         }
     }
 
-   
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Suelo" || collision.gameObject.tag == "Plat_Red" || collision.gameObject.tag == "Plat_Yellow")
+        {
+            grounded = true;
+        }
+    }
+
+
     private float PlatformChecker(float distance)
     {
         Vector3 posToRay = new Vector3(_phiroRGD.transform.position.x, _phiroRGD.transform.position.y + 1.3f, _phiroRGD.transform.position.z);
@@ -361,7 +369,7 @@ public class PhiroMovement : MonoBehaviour {
         Debug.Log("ChildPosition: " + posToRay);
         Debug.Log("Direction: " + _phiroRGD.transform.up);
         Debug.Log("Distance: " + distance);
-        Debug.DrawLine(posToRay, new Vector3(posToRay.x, posToRay.y + 10, posToRay.z));
+        Debug.DrawLine(posToRay, new Vector3(posToRay.x, posToRay.y + 10, posToRay.z), Color.green, 2f);
         //</DEBUGS>---------------------------------------------------------------------------------------------------
         if(!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
         {
@@ -393,6 +401,7 @@ public class PhiroMovement : MonoBehaviour {
         }
         _phiroRGD.gravityScale = 4f;
         invencible = false;
+        canClimb = false;
         _phiroRGD.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
     }
     

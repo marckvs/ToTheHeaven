@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace GM
 {
@@ -42,7 +43,7 @@ namespace GM
 
         void CheckForMenuToggleRequest()
         {
-            if(Input.GetKeyUp(KeyCode.Escape) && !gameManagerMaster.isGameOver)
+			if(Input.GetKeyUp(KeyCode.Escape) && !gameManagerMaster.isGameOver && SceneManager.GetActiveScene().buildIndex !=1)
             {
                 ToggleMenu();
             }

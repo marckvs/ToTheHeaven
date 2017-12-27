@@ -40,7 +40,7 @@ public class PhiroMovement : MonoBehaviour {
     //ANIMATION
     [Header("Animation Integration")]
     private AnimacionsPhiro anim;
-    public bool canClimb;
+    public bool canClimb, climbing;
     [Space(10)]
 
     //ENEMY COLLISION
@@ -84,7 +84,7 @@ public class PhiroMovement : MonoBehaviour {
         hitParticles = Instantiate(hitParticles);
         hitParticles.gameObject.SetActive(false);
         mainP = coolDownPs.main;
-
+        climbing = false;
         onStairs = false;
         stairsWithPlatform = false;
         light_caught = false;
@@ -104,35 +104,10 @@ public class PhiroMovement : MonoBehaviour {
         crouching = false;
         knockingBack = false;
         canClimb = false;
+        climbing = false;
         //anim.phiroAnims.SetTrigger("idle");
     }
     
-    private void Update()
-    {
-
-        if (Input.GetKeyDown(KeyCode.S) && !onStairs)
-        {
-            Crouch();
-        }
-
-        if (crouching && Input.GetKeyUp(KeyCode.S))
-        {
-            StandUp();
-        }
-
-        if (onStairs)
-        {
-            _phiroRGD.gravityScale = 0f;
-            stairs_velocity = stairs_speed * Input.GetAxisRaw("Vertical");
-            _phiroRGD.velocity = new Vector2(0, stairs_velocity);
-        }
-
-        if (!onStairs)
-        {
-            _phiroRGD.gravityScale = gravityStore;
-        }
-
-    }
 
 
     void FixedUpdate () {
@@ -200,13 +175,45 @@ public class PhiroMovement : MonoBehaviour {
                 }
                 break;
         }
+    }
+
+    private void LateUpdate()
+    {
+        hit = false;
+    }
+
+    private void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.S) && !onStairs)
+        {
+            Crouch();
+        }
+
+        if (crouching && Input.GetKeyUp(KeyCode.S))
+        {
+            StandUp();
+        }
+
+        if (onStairs)
+        {
+            _phiroRGD.gravityScale = 0f;
+            stairs_velocity = stairs_speed * Input.GetAxisRaw("Vertical");
+            _phiroRGD.velocity = new Vector2(0, stairs_velocity);
+        }
+
+        if (!onStairs)
+        {
+            _phiroRGD.gravityScale = gravityStore;
+        }
 
 
-        if (Input.GetKey(KeyCode.Space) && grounded)//Escalado
+        if (Input.GetKeyDown(KeyCode.Space) && grounded && !climbing)//Escalado
         {
             hitDistance = PlatformChecker(distance_max);
-            if(hitDistance > Mathf.NegativeInfinity)
+            if (hitDistance > Mathf.NegativeInfinity)
             {
+                anim.phiroAnims.SetTrigger("estirabrazos");
                 StartCoroutine(WaitForClimb(hitDistance, plat_height));
             }
             else
@@ -214,12 +221,9 @@ public class PhiroMovement : MonoBehaviour {
                 grounded = true;
             }
         }
+
     }
 
-    private void LateUpdate()
-    {
-        hit = false;
-    }
 
     private void Crouch()
     {
@@ -243,7 +247,7 @@ public class PhiroMovement : MonoBehaviour {
             {
                 Debug.Log("Ground Collision Normal: " + pointOfCollision.normal);
                 grounded = true;
-
+                climbing = false;
             }
         }
 
@@ -371,14 +375,16 @@ public class PhiroMovement : MonoBehaviour {
         Debug.Log("Distance: " + distance);
         Debug.DrawLine(posToRay, new Vector3(posToRay.x, posToRay.y + 10, posToRay.z), Color.green, 2f);
         //</DEBUGS>---------------------------------------------------------------------------------------------------
-        if(!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
+        if(!Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A) && !anim.GetAgachado())
         {
             if (hit.collider != null && hit.collider.tag == "Plat_Yellow" &&  hit.collider.tag != "UnderStairs" && !stairsWithPlatform)
             {
                 grounded = false;
                 canClimb = true;
+                climbing = true;
                 Debug.Log("Ha colisionado");
                 return hit.point.y;
+
             }
             else
             {
@@ -387,11 +393,13 @@ public class PhiroMovement : MonoBehaviour {
                 return Mathf.NegativeInfinity;
             }
         }
+        canClimb = false;
         return Mathf.NegativeInfinity;
 
     }
     IEnumerator Climb(float distance, float platformHeight)
-    {      
+    {
+        anim.phiroAnims.SetTrigger("subir_plataforma");
         while (_phiroRGD.transform.position.y - 1 < distance + platformHeight)
         {
             invencible = true;
@@ -410,7 +418,7 @@ public class PhiroMovement : MonoBehaviour {
         float timer = 0.7f;
         while ((timer -= Time.deltaTime) > 0)
         {
-            Debug.Log("climbing");
+            //Debug.Log("climbing");
             yield return null;
         }
         Debug.Log("HA FINALIZADO WAIT FOR CLIMB");

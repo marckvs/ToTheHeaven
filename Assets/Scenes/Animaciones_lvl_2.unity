@@ -167,7 +167,6 @@ GameObject:
   m_Component:
   - component: {fileID: 70655753}
   - component: {fileID: 70655756}
-  - component: {fileID: 70655755}
   - component: {fileID: 70655754}
   m_Layer: 0
   m_Name: petalo2
@@ -189,8 +188,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &70655754
-MeshRenderer:
+--- !u!137 &70655754
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -223,13 +222,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &70655755
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 70655752}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1713025101}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1713025101}
+  m_AABB:
+    m_Center: {x: 0.4305081, y: 0.048206627, z: 0}
+    m_Extent: {x: 0.7730808, y: 0.40640074, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &70655756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +253,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1713025101}
 --- !u!1 &71677088
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +309,6 @@ GameObject:
   m_Component:
   - component: {fileID: 89129083}
   - component: {fileID: 89129086}
-  - component: {fileID: 89129085}
   - component: {fileID: 89129084}
   m_Layer: 0
   m_Name: brazo_der
@@ -325,8 +330,8 @@ Transform:
   m_Father: {fileID: 1654570482}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &89129084
-MeshRenderer:
+--- !u!137 &89129084
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -359,13 +364,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &89129085
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 89129082}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1651914041}
+  - {fileID: 607379796}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1651914041}
+  m_AABB:
+    m_Center: {x: 0.93495154, y: -0.27115238, z: 0}
+    m_Extent: {x: 1.721297, y: 0.7576946, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &89129086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +396,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1651914041}
+  - {fileID: 607379796}
 --- !u!1 &95750624
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +484,6 @@ GameObject:
   m_Component:
   - component: {fileID: 111412341}
   - component: {fileID: 111412344}
-  - component: {fileID: 111412343}
   - component: {fileID: 111412342}
   m_Layer: 0
   m_Name: champi_iz
@@ -492,8 +505,8 @@ Transform:
   m_Father: {fileID: 1275163807}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &111412342
-MeshRenderer:
+--- !u!137 &111412342
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -526,13 +539,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &111412343
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 111412340}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1324532680}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1324532680}
+  m_AABB:
+    m_Center: {x: 0.45031124, y: -0.1635896, z: 0}
+    m_Extent: {x: 0.88721544, y: 1.7539283, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &111412344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,7 +570,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1324532680}
 --- !u!1 &116414592
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,7 +718,6 @@ GameObject:
   m_Component:
   - component: {fileID: 169820487}
   - component: {fileID: 169820490}
-  - component: {fileID: 169820489}
   - component: {fileID: 169820488}
   m_Layer: 0
   m_Name: hoja_i
@@ -720,8 +739,8 @@ Transform:
   m_Father: {fileID: 1654570482}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &169820488
-MeshRenderer:
+--- !u!137 &169820488
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -754,13 +773,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &169820489
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 169820486}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 239412628}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 239412628}
+  m_AABB:
+    m_Center: {x: 0.5112433, y: -0.010566831, z: 0}
+    m_Extent: {x: 0.51196426, y: 0.21385048, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &169820490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,7 +804,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 239412628}
 --- !u!1 &183920577
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +815,6 @@ GameObject:
   m_Component:
   - component: {fileID: 183920578}
   - component: {fileID: 183920581}
-  - component: {fileID: 183920580}
   - component: {fileID: 183920579}
   m_Layer: 0
   m_Name: brazo_iz
@@ -811,8 +836,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &183920579
-MeshRenderer:
+--- !u!137 &183920579
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -845,13 +870,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &183920580
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 183920577}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 98099236}
+  - {fileID: 1467495541}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 98099236}
+  m_AABB:
+    m_Center: {x: 0.624596, y: 0.29054624, z: 0}
+    m_Extent: {x: 0.82044804, y: 0.49083585, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &183920581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,7 +902,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 98099236}
+  - {fileID: 1467495541}
 --- !u!1 &202139595
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +914,6 @@ GameObject:
   m_Component:
   - component: {fileID: 202139596}
   - component: {fileID: 202139599}
-  - component: {fileID: 202139598}
   - component: {fileID: 202139597}
   m_Layer: 0
   m_Name: petalo1
@@ -902,8 +935,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &202139597
-MeshRenderer:
+--- !u!137 &202139597
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -936,13 +969,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &202139598
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 202139595}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 947856984}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 947856984}
+  m_AABB:
+    m_Center: {x: 0.4725636, y: 0.020824343, z: 0}
+    m_Extent: {x: 0.60416853, y: 0.25944957, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &202139599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,7 +1000,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 947856984}
 --- !u!1 &215990925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,7 +1101,6 @@ GameObject:
   m_Component:
   - component: {fileID: 256496560}
   - component: {fileID: 256496563}
-  - component: {fileID: 256496562}
   - component: {fileID: 256496561}
   m_Layer: 0
   m_Name: hoja_d
@@ -1083,8 +1122,8 @@ Transform:
   m_Father: {fileID: 1654570482}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &256496561
-MeshRenderer:
+--- !u!137 &256496561
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1117,13 +1156,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &256496562
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 256496559}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1399738320}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1399738320}
+  m_AABB:
+    m_Center: {x: 0.5445251, y: 0.0067644864, z: 0}
+    m_Extent: {x: 0.50528854, y: 0.21382721, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &256496563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,7 +1187,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1399738320}
 --- !u!1 &257585659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1341,6 @@ GameObject:
   m_Component:
   - component: {fileID: 305551097}
   - component: {fileID: 305551100}
-  - component: {fileID: 305551099}
   - component: {fileID: 305551098}
   m_Layer: 0
   m_Name: brazo_iz
@@ -1317,8 +1362,8 @@ Transform:
   m_Father: {fileID: 1654570482}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &305551098
-MeshRenderer:
+--- !u!137 &305551098
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1351,13 +1396,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &305551099
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 305551096}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1341592647}
+  - {fileID: 1619350479}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1341592647}
+  m_AABB:
+    m_Center: {x: 1.3591255, y: 0.25424933, z: 0}
+    m_Extent: {x: 1.8033563, y: 0.83133996, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &305551100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1376,7 +1428,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1341592647}
+  - {fileID: 1619350479}
 --- !u!1 &322429833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,7 +1552,6 @@ GameObject:
   m_Component:
   - component: {fileID: 378317925}
   - component: {fileID: 378317928}
-  - component: {fileID: 378317927}
   - component: {fileID: 378317926}
   m_Layer: 0
   m_Name: pierna_iz
@@ -1520,8 +1573,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &378317926
-MeshRenderer:
+--- !u!137 &378317926
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1554,13 +1607,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &378317927
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 378317924}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 546017559}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 546017559}
+  m_AABB:
+    m_Center: {x: 0.5414832, y: -0.0040094554, z: 0}
+    m_Extent: {x: 0.82214206, y: 0.21954827, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &378317928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1579,7 +1638,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 546017559}
 --- !u!1 &387944230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1792,6 @@ GameObject:
   m_Component:
   - component: {fileID: 430060048}
   - component: {fileID: 430060051}
-  - component: {fileID: 430060050}
   - component: {fileID: 430060049}
   m_Layer: 0
   m_Name: petalo5
@@ -1754,8 +1813,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &430060049
-MeshRenderer:
+--- !u!137 &430060049
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1788,13 +1847,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &430060050
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 430060047}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 2046093818}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 2046093818}
+  m_AABB:
+    m_Center: {x: 0.40296072, y: -0.05841121, z: 0}
+    m_Extent: {x: 0.69044596, y: 0.3421492, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &430060051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1813,7 +1878,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 2046093818}
 --- !u!1 &443292845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,7 +2010,6 @@ GameObject:
   m_Component:
   - component: {fileID: 479335357}
   - component: {fileID: 479335360}
-  - component: {fileID: 479335359}
   - component: {fileID: 479335358}
   m_Layer: 0
   m_Name: pierna_der
@@ -1966,8 +2031,8 @@ Transform:
   m_Father: {fileID: 1333819324}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &479335358
-MeshRenderer:
+--- !u!137 &479335358
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2000,13 +2065,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &479335359
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 479335356}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1856038086}
+  - {fileID: 443292846}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1856038086}
+  m_AABB:
+    m_Center: {x: 0.27957636, y: -0.16263977, z: 0}
+    m_Extent: {x: 0.7738845, y: 0.3452011, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &479335360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2025,7 +2097,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1856038086}
+  - {fileID: 443292846}
 --- !u!1 &504446104
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,7 +2109,6 @@ GameObject:
   m_Component:
   - component: {fileID: 504446105}
   - component: {fileID: 504446108}
-  - component: {fileID: 504446107}
   - component: {fileID: 504446106}
   m_Layer: 0
   m_Name: brazo_der
@@ -2057,8 +2130,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &504446106
-MeshRenderer:
+--- !u!137 &504446106
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2091,13 +2164,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &504446107
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 504446104}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 2057958101}
+  - {fileID: 1264034927}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 2057958101}
+  m_AABB:
+    m_Center: {x: 0.6344209, y: 0.17128664, z: 0}
+    m_Extent: {x: 0.7086098, y: 0.37854445, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &504446108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2116,7 +2196,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 2057958101}
+  - {fileID: 1264034927}
 --- !u!1 &519017554
 GameObject:
   m_ObjectHideFlags: 0
@@ -2126,7 +2208,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519017555}
   - component: {fileID: 519017558}
-  - component: {fileID: 519017557}
   - component: {fileID: 519017556}
   m_Layer: 0
   m_Name: petalo2
@@ -2148,8 +2229,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &519017556
-MeshRenderer:
+--- !u!137 &519017556
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2182,13 +2263,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &519017557
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 519017554}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 71677089}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 71677089}
+  m_AABB:
+    m_Center: {x: 0.43896824, y: 0.043883026, z: 0}
+    m_Extent: {x: 0.73823005, y: 0.36255702, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &519017558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2207,7 +2294,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 71677089}
 --- !u!1 &522644889
 GameObject:
   m_ObjectHideFlags: 0
@@ -2378,7 +2466,6 @@ GameObject:
   m_Component:
   - component: {fileID: 560457437}
   - component: {fileID: 560457440}
-  - component: {fileID: 560457439}
   - component: {fileID: 560457438}
   m_Layer: 0
   m_Name: cabeza
@@ -2400,8 +2487,8 @@ Transform:
   m_Father: {fileID: 1333819324}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &560457438
-MeshRenderer:
+--- !u!137 &560457438
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2434,13 +2521,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
---- !u!33 &560457439
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 560457436}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 950374861}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 950374861}
+  m_AABB:
+    m_Center: {x: 0.5996802, y: -0.18244767, z: 0}
+    m_Extent: {x: 0.8109772, y: 0.7109726, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &560457440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2459,7 +2552,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 3
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 950374861}
 --- !u!1 &586561901
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,7 +2701,6 @@ GameObject:
   m_Component:
   - component: {fileID: 599041796}
   - component: {fileID: 599041799}
-  - component: {fileID: 599041798}
   - component: {fileID: 599041797}
   m_Layer: 0
   m_Name: cabeza
@@ -2629,8 +2722,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &599041797
-MeshRenderer:
+--- !u!137 &599041797
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2663,13 +2756,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
---- !u!33 &599041798
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 599041795}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1071576767}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1071576767}
+  m_AABB:
+    m_Center: {x: 0.3793893, y: 0.0341928, z: 0}
+    m_Extent: {x: 0.76374936, y: 0.5651903, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &599041799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2688,7 +2787,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1071576767}
 --- !u!1 &607379795
 GameObject:
   m_ObjectHideFlags: 0
@@ -2743,7 +2843,6 @@ GameObject:
   m_Component:
   - component: {fileID: 613886579}
   - component: {fileID: 613886582}
-  - component: {fileID: 613886581}
   - component: {fileID: 613886580}
   m_Layer: 0
   m_Name: brazo_der
@@ -2765,8 +2864,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &613886580
-MeshRenderer:
+--- !u!137 &613886580
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2799,13 +2898,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &613886581
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 613886578}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 130310573}
+  - {fileID: 1160880637}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 130310573}
+  m_AABB:
+    m_Center: {x: 0.6418253, y: -0.2597264, z: 0}
+    m_Extent: {x: 0.84572875, y: 0.49689442, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &613886582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2824,7 +2930,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 130310573}
+  - {fileID: 1160880637}
 --- !u!1 &616241259
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,7 +2942,6 @@ GameObject:
   m_Component:
   - component: {fileID: 616241260}
   - component: {fileID: 616241263}
-  - component: {fileID: 616241262}
   - component: {fileID: 616241261}
   m_Layer: 0
   m_Name: petalo3
@@ -2856,8 +2963,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &616241261
-MeshRenderer:
+--- !u!137 &616241261
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2890,13 +2997,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &616241262
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 616241259}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1147016675}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1147016675}
+  m_AABB:
+    m_Center: {x: 0.55835927, y: -0.025985152, z: 0}
+    m_Extent: {x: 0.7388215, y: 0.37673047, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &616241263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2915,7 +3028,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1147016675}
 --- !u!1 &656905760
 GameObject:
   m_ObjectHideFlags: 0
@@ -3032,10 +3146,10 @@ Transform:
   m_LocalPosition: {x: 6.3272, y: 18.875254, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1805902711}
   - {fileID: 1620411884}
-  - {fileID: 1425383140}
+  - {fileID: 1805902711}
   - {fileID: 672759508}
+  - {fileID: 1425383140}
   m_Father: {fileID: 1194783680}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 91.11}
@@ -3129,7 +3243,7 @@ Transform:
   m_Children:
   - {fileID: 1575164164}
   m_Father: {fileID: 668305717}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0.163, y: -179.98401, z: 272.40698}
 --- !u!114 &672759509
 MonoBehaviour:
@@ -3247,7 +3361,6 @@ GameObject:
   m_Component:
   - component: {fileID: 683432451}
   - component: {fileID: 683432454}
-  - component: {fileID: 683432453}
   - component: {fileID: 683432452}
   m_Layer: 0
   m_Name: champi_der
@@ -3269,8 +3382,8 @@ Transform:
   m_Father: {fileID: 1275163807}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &683432452
-MeshRenderer:
+--- !u!137 &683432452
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3303,13 +3416,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &683432453
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 683432450}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 142382864}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 142382864}
+  m_AABB:
+    m_Center: {x: 0.55004776, y: 0.18162334, z: 0}
+    m_Extent: {x: 0.79031944, y: 1.594347, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &683432454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3328,7 +3447,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 142382864}
 --- !u!1 &684732159
 GameObject:
   m_ObjectHideFlags: 0
@@ -3338,7 +3458,6 @@ GameObject:
   m_Component:
   - component: {fileID: 684732160}
   - component: {fileID: 684732163}
-  - component: {fileID: 684732162}
   - component: {fileID: 684732161}
   m_Layer: 0
   m_Name: cuerpo
@@ -3360,8 +3479,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &684732161
-MeshRenderer:
+--- !u!137 &684732161
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3394,13 +3513,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &684732162
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 684732159}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 2047077265}
+  - {fileID: 1227401770}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 2047077265}
+  m_AABB:
+    m_Center: {x: 1.0944066, y: -0.23950315, z: 0}
+    m_Extent: {x: 1.4220991, y: 0.80951834, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &684732163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3419,7 +3545,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 2047077265}
+  - {fileID: 1227401770}
 --- !u!1 &702400601
 GameObject:
   m_ObjectHideFlags: 0
@@ -3429,7 +3557,6 @@ GameObject:
   m_Component:
   - component: {fileID: 702400602}
   - component: {fileID: 702400605}
-  - component: {fileID: 702400604}
   - component: {fileID: 702400603}
   m_Layer: 0
   m_Name: brazo_der
@@ -3451,8 +3578,8 @@ Transform:
   m_Father: {fileID: 1333819324}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &702400603
-MeshRenderer:
+--- !u!137 &702400603
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3485,13 +3612,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
---- !u!33 &702400604
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 702400601}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 116414593}
+  - {fileID: 1872699259}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 116414593}
+  m_AABB:
+    m_Center: {x: 0.70016223, y: -0.059898347, z: 0}
+    m_Extent: {x: 1.2725835, y: 0.40185395, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &702400605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3510,7 +3644,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 116414593}
+  - {fileID: 1872699259}
 --- !u!1 &717112191
 GameObject:
   m_ObjectHideFlags: 0
@@ -3520,7 +3656,6 @@ GameObject:
   m_Component:
   - component: {fileID: 717112192}
   - component: {fileID: 717112195}
-  - component: {fileID: 717112194}
   - component: {fileID: 717112193}
   m_Layer: 0
   m_Name: pecho
@@ -3542,8 +3677,8 @@ Transform:
   m_Father: {fileID: 1654570482}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &717112193
-MeshRenderer:
+--- !u!137 &717112193
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3576,13 +3711,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &717112194
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 717112191}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 657485002}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 657485002}
+  m_AABB:
+    m_Center: {x: 0.20003378, y: 0.35146576, z: 0}
+    m_Extent: {x: 1.1657004, y: 2.0151834, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &717112195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3601,7 +3742,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 657485002}
 --- !u!1 &722715555
 GameObject:
   m_ObjectHideFlags: 0
@@ -3611,7 +3753,6 @@ GameObject:
   m_Component:
   - component: {fileID: 722715556}
   - component: {fileID: 722715559}
-  - component: {fileID: 722715558}
   - component: {fileID: 722715557}
   m_Layer: 0
   m_Name: cola4
@@ -3633,8 +3774,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &722715557
-MeshRenderer:
+--- !u!137 &722715557
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3667,13 +3808,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &722715558
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 722715555}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 50767195}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 50767195}
+  m_AABB:
+    m_Center: {x: 0.49697632, y: -0.08440593, z: 0}
+    m_Extent: {x: 0.77596265, y: 1.0226723, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &722715559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3692,7 +3839,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 50767195}
 --- !u!1 &728122463
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,7 +3942,6 @@ GameObject:
   m_Component:
   - component: {fileID: 754833495}
   - component: {fileID: 754833498}
-  - component: {fileID: 754833497}
   - component: {fileID: 754833496}
   m_Layer: 0
   m_Name: brazo_der
@@ -3816,8 +3963,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &754833496
-MeshRenderer:
+--- !u!137 &754833496
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -3850,13 +3997,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &754833497
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 754833494}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1150046373}
+  - {fileID: 856678842}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1150046373}
+  m_AABB:
+    m_Center: {x: 0.5651643, y: -0.26554024, z: 0}
+    m_Extent: {x: 0.85800195, y: 0.5142516, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &754833498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3875,7 +4029,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1150046373}
+  - {fileID: 856678842}
 --- !u!1 &754847554
 GameObject:
   m_ObjectHideFlags: 0
@@ -4116,7 +4272,6 @@ GameObject:
   m_Component:
   - component: {fileID: 804272331}
   - component: {fileID: 804272334}
-  - component: {fileID: 804272333}
   - component: {fileID: 804272332}
   m_Layer: 0
   m_Name: cabeza
@@ -4138,8 +4293,8 @@ Transform:
   m_Father: {fileID: 1275163807}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &804272332
-MeshRenderer:
+--- !u!137 &804272332
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4172,13 +4327,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &804272333
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 804272330}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1538659129}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1538659129}
+  m_AABB:
+    m_Center: {x: 0.7784979, y: -0.056888312, z: 0}
+    m_Extent: {x: 0.96425444, y: 0.9680282, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &804272334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4197,7 +4358,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1538659129}
 --- !u!1 &816594962
 GameObject:
   m_ObjectHideFlags: 0
@@ -4207,7 +4369,6 @@ GameObject:
   m_Component:
   - component: {fileID: 816594963}
   - component: {fileID: 816594966}
-  - component: {fileID: 816594965}
   - component: {fileID: 816594964}
   m_Layer: 0
   m_Name: petalo4
@@ -4229,8 +4390,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &816594964
-MeshRenderer:
+--- !u!137 &816594964
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4263,13 +4424,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &816594965
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 816594962}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 997181213}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 997181213}
+  m_AABB:
+    m_Center: {x: 0.47446626, y: -0.09988773, z: 0}
+    m_Extent: {x: 0.7454515, y: 0.37367567, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &816594966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4288,7 +4455,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 997181213}
 --- !u!1 &826243822
 GameObject:
   m_ObjectHideFlags: 0
@@ -4298,7 +4466,6 @@ GameObject:
   m_Component:
   - component: {fileID: 826243823}
   - component: {fileID: 826243826}
-  - component: {fileID: 826243825}
   - component: {fileID: 826243824}
   m_Layer: 0
   m_Name: brazo_iz
@@ -4320,8 +4487,8 @@ Transform:
   m_Father: {fileID: 1275163807}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &826243824
-MeshRenderer:
+--- !u!137 &826243824
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4354,13 +4521,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &826243825
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 826243822}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1510517139}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1510517139}
+  m_AABB:
+    m_Center: {x: 0.3807546, y: -0.079469234, z: 0}
+    m_Extent: {x: 0.63785315, y: 0.42989758, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &826243826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4379,7 +4552,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1510517139}
 --- !u!1 &846745122
 GameObject:
   m_ObjectHideFlags: 0
@@ -4389,7 +4563,6 @@ GameObject:
   m_Component:
   - component: {fileID: 846745123}
   - component: {fileID: 846745126}
-  - component: {fileID: 846745125}
   - component: {fileID: 846745124}
   m_Layer: 0
   m_Name: pelo
@@ -4411,8 +4584,8 @@ Transform:
   m_Father: {fileID: 1275163807}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &846745124
-MeshRenderer:
+--- !u!137 &846745124
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4445,13 +4618,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
---- !u!33 &846745125
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 846745122}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1148024351}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1148024351}
+  m_AABB:
+    m_Center: {x: 0.6588911, y: -0.18426228, z: 0}
+    m_Extent: {x: 0.7896191, y: 1.3370711, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &846745126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4470,7 +4649,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1148024351}
 --- !u!1 &856678841
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,7 +4785,6 @@ GameObject:
   m_Component:
   - component: {fileID: 865578879}
   - component: {fileID: 865578882}
-  - component: {fileID: 865578881}
   - component: {fileID: 865578880}
   m_Layer: 0
   m_Name: cuerpo
@@ -4627,8 +4806,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &865578880
-MeshRenderer:
+--- !u!137 &865578880
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4661,13 +4840,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &865578881
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 865578878}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 798722422}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 798722422}
+  m_AABB:
+    m_Center: {x: 0.42637378, y: 0.026444763, z: 0}
+    m_Extent: {x: 0.60704535, y: 0.3686215, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &865578882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4686,7 +4871,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 798722422}
 --- !u!1 &867418911
 GameObject:
   m_ObjectHideFlags: 0
@@ -4696,7 +4882,6 @@ GameObject:
   m_Component:
   - component: {fileID: 867418912}
   - component: {fileID: 867418915}
-  - component: {fileID: 867418914}
   - component: {fileID: 867418913}
   m_Layer: 0
   m_Name: cola2
@@ -4718,8 +4903,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &867418913
-MeshRenderer:
+--- !u!137 &867418913
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4752,13 +4937,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &867418914
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 867418911}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1495480511}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1495480511}
+  m_AABB:
+    m_Center: {x: 0.48930106, y: -0.088406086, z: 0}
+    m_Extent: {x: 0.67821705, y: 1.0319299, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &867418915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4777,7 +4968,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1495480511}
 --- !u!1 &873048535
 GameObject:
   m_ObjectHideFlags: 0
@@ -4787,7 +4979,6 @@ GameObject:
   m_Component:
   - component: {fileID: 873048536}
   - component: {fileID: 873048539}
-  - component: {fileID: 873048538}
   - component: {fileID: 873048537}
   m_Layer: 0
   m_Name: cuerpo
@@ -4809,8 +5000,8 @@ Transform:
   m_Father: {fileID: 1330053276}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &873048537
-MeshRenderer:
+--- !u!137 &873048537
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4843,13 +5034,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &873048538
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 873048535}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 668305717}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 668305717}
+  m_AABB:
+    m_Center: {x: 0.50715613, y: 0.058582544, z: 0}
+    m_Extent: {x: 0.8020778, y: 0.8027557, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &873048539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4868,7 +5065,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 668305717}
 --- !u!1 &916787038
 GameObject:
   m_ObjectHideFlags: 0
@@ -4878,7 +5076,6 @@ GameObject:
   m_Component:
   - component: {fileID: 916787039}
   - component: {fileID: 916787042}
-  - component: {fileID: 916787041}
   - component: {fileID: 916787040}
   m_Layer: 0
   m_Name: cuello
@@ -4900,8 +5097,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &916787040
-MeshRenderer:
+--- !u!137 &916787040
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4934,13 +5131,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &916787041
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 916787038}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1800372097}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1800372097}
+  m_AABB:
+    m_Center: {x: 0.29647738, y: 0.016750276, z: 0}
+    m_Extent: {x: 0.37924927, y: 0.29786363, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &916787042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4959,7 +5162,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1800372097}
 --- !u!1 &923469930
 GameObject:
   m_ObjectHideFlags: 0
@@ -5090,7 +5294,6 @@ GameObject:
   m_Component:
   - component: {fileID: 926503082}
   - component: {fileID: 926503085}
-  - component: {fileID: 926503084}
   - component: {fileID: 926503083}
   m_Layer: 0
   m_Name: brazo_iz
@@ -5112,8 +5315,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &926503083
-MeshRenderer:
+--- !u!137 &926503083
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5146,13 +5349,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &926503084
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 926503081}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 669238094}
+  - {fileID: 1537014282}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 669238094}
+  m_AABB:
+    m_Center: {x: 0.6636119, y: 0.24505794, z: 0}
+    m_Extent: {x: 0.7193997, y: 0.5255792, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &926503085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5171,7 +5381,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 669238094}
+  - {fileID: 1537014282}
 --- !u!1 &930712904
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,7 +5438,6 @@ GameObject:
   m_Component:
   - component: {fileID: 944463700}
   - component: {fileID: 944463703}
-  - component: {fileID: 944463702}
   - component: {fileID: 944463701}
   m_Layer: 0
   m_Name: cola3
@@ -5248,8 +5459,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &944463701
-MeshRenderer:
+--- !u!137 &944463701
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5282,13 +5493,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &944463702
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 944463699}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 2101969105}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 2101969105}
+  m_AABB:
+    m_Center: {x: 0.5082598, y: -0.04957503, z: 0}
+    m_Extent: {x: 0.6521895, y: 0.8928344, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &944463703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5307,7 +5524,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 2101969105}
 --- !u!1 &947856983
 GameObject:
   m_ObjectHideFlags: 0
@@ -5721,7 +5939,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1024410919}
   - component: {fileID: 1024410922}
-  - component: {fileID: 1024410921}
   - component: {fileID: 1024410920}
   m_Layer: 0
   m_Name: palo
@@ -5743,8 +5960,8 @@ Transform:
   m_Father: {fileID: 1654570482}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1024410920
-MeshRenderer:
+--- !u!137 &1024410920
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5777,13 +5994,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1024410921
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1024410918}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1642214506}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1642214506}
+  m_AABB:
+    m_Center: {x: 0.70422626, y: -0.026885163, z: 0}
+    m_Extent: {x: 0.7468815, y: 0.110377, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1024410922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5802,7 +6025,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1642214506}
 --- !u!1 &1047878460
 GameObject:
   m_ObjectHideFlags: 0
@@ -5812,7 +6036,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1047878461}
   - component: {fileID: 1047878464}
-  - component: {fileID: 1047878463}
   - component: {fileID: 1047878462}
   m_Layer: 0
   m_Name: petalo3
@@ -5834,8 +6057,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1047878462
-MeshRenderer:
+--- !u!137 &1047878462
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5868,13 +6091,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1047878463
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1047878460}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 215990926}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 215990926}
+  m_AABB:
+    m_Center: {x: 0.43536872, y: -0.043674886, z: 0}
+    m_Extent: {x: 0.6610046, y: 0.36591655, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1047878464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5893,7 +6122,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 215990926}
 --- !u!1 &1064730797
 GameObject:
   m_ObjectHideFlags: 0
@@ -5903,7 +6133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1064730798}
   - component: {fileID: 1064730801}
-  - component: {fileID: 1064730800}
   - component: {fileID: 1064730799}
   m_Layer: 0
   m_Name: cola6
@@ -5925,8 +6154,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1064730799
-MeshRenderer:
+--- !u!137 &1064730799
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5959,13 +6188,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1064730800
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1064730797}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1006836143}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1006836143}
+  m_AABB:
+    m_Center: {x: 0.44183365, y: 0.011209309, z: 0}
+    m_Extent: {x: 0.69393075, y: 0.67674303, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1064730801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5984,7 +6219,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1006836143}
 --- !u!1 &1071576766
 GameObject:
   m_ObjectHideFlags: 0
@@ -6248,7 +6484,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1126986435}
   - component: {fileID: 1126986438}
-  - component: {fileID: 1126986437}
   - component: {fileID: 1126986436}
   m_Layer: 0
   m_Name: petalo6
@@ -6270,8 +6505,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1126986436
-MeshRenderer:
+--- !u!137 &1126986436
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -6304,13 +6539,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1126986437
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1126986434}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1266187604}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1266187604}
+  m_AABB:
+    m_Center: {x: 0.30574608, y: -0.045719862, z: 0}
+    m_Extent: {x: 0.817822, y: 0.32879865, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1126986438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6329,7 +6570,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1266187604}
 --- !u!1 &1131392328
 GameObject:
   m_ObjectHideFlags: 0
@@ -6505,7 +6747,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1154671786}
   - component: {fileID: 1154671789}
-  - component: {fileID: 1154671788}
   - component: {fileID: 1154671787}
   m_Layer: 0
   m_Name: petalo1
@@ -6527,8 +6768,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1154671787
-MeshRenderer:
+--- !u!137 &1154671787
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -6561,13 +6802,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1154671788
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1154671785}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 925551118}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 925551118}
+  m_AABB:
+    m_Center: {x: 0.49490118, y: 0.025294393, z: 0}
+    m_Extent: {x: 0.5997869, y: 0.23197058, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1154671789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6586,7 +6833,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 925551118}
 --- !u!1 &1158699704
 GameObject:
   m_ObjectHideFlags: 0
@@ -6782,7 +7030,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1221115607}
   - component: {fileID: 1221115610}
-  - component: {fileID: 1221115609}
   - component: {fileID: 1221115608}
   m_Layer: 0
   m_Name: petalo4
@@ -6804,8 +7051,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1221115608
-MeshRenderer:
+--- !u!137 &1221115608
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -6838,13 +7085,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1221115609
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1221115606}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1313396353}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1313396353}
+  m_AABB:
+    m_Center: {x: 0.45405838, y: -0.09680912, z: 0}
+    m_Extent: {x: 0.6510744, y: 0.36349925, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1221115610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6863,7 +7116,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1313396353}
 --- !u!1 &1227401769
 GameObject:
   m_ObjectHideFlags: 0
@@ -6962,7 +7216,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1232701892}
   - component: {fileID: 1232701895}
-  - component: {fileID: 1232701894}
   - component: {fileID: 1232701893}
   m_Layer: 0
   m_Name: cola1
@@ -6984,8 +7237,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1232701893
-MeshRenderer:
+--- !u!137 &1232701893
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -7018,13 +7271,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1232701894
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1232701891}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 2110649081}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 2110649081}
+  m_AABB:
+    m_Center: {x: 0.61140406, y: -0.030138612, z: 0}
+    m_Extent: {x: 0.5072607, y: 0.80858946, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1232701895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7043,7 +7302,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 2110649081}
 --- !u!1 &1234623240
 GameObject:
   m_ObjectHideFlags: 0
@@ -7316,7 +7576,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1312986275}
   - component: {fileID: 1312986278}
-  - component: {fileID: 1312986277}
   - component: {fileID: 1312986276}
   m_Layer: 0
   m_Name: petalo5
@@ -7338,8 +7597,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1312986276
-MeshRenderer:
+--- !u!137 &1312986276
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -7372,13 +7631,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1312986277
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1312986274}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1997052552}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1997052552}
+  m_AABB:
+    m_Center: {x: 0.44795743, y: -0.0016283393, z: 0}
+    m_Extent: {x: 0.63946617, y: 0.3187991, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1312986278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7397,7 +7662,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1997052552}
 --- !u!1 &1313396352
 GameObject:
   m_ObjectHideFlags: 0
@@ -7710,7 +7976,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1395847537}
   - component: {fileID: 1395847540}
-  - component: {fileID: 1395847539}
   - component: {fileID: 1395847538}
   m_Layer: 0
   m_Name: pierna_iz
@@ -7732,8 +7997,8 @@ Transform:
   m_Father: {fileID: 1333819324}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1395847538
-MeshRenderer:
+--- !u!137 &1395847538
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -7766,13 +8031,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1395847539
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1395847536}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 367849503}
+  - {fileID: 1698122765}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 367849503}
+  m_AABB:
+    m_Center: {x: 0.30194145, y: 0.120851696, z: 0}
+    m_Extent: {x: 0.772813, y: 0.3469609, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1395847540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7791,7 +8063,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 367849503}
+  - {fileID: 1698122765}
 --- !u!1 &1399738319
 GameObject:
   m_ObjectHideFlags: 0
@@ -7865,7 +8139,7 @@ Transform:
   m_Children:
   - {fileID: 287028931}
   m_Father: {fileID: 668305717}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0.163, y: -179.98401, z: 275.658}
 --- !u!114 &1425383141
 MonoBehaviour:
@@ -8003,7 +8277,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1468747017}
   - component: {fileID: 1468747020}
-  - component: {fileID: 1468747019}
   - component: {fileID: 1468747018}
   m_Layer: 0
   m_Name: cuerpo
@@ -8025,8 +8298,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1468747018
-MeshRenderer:
+--- !u!137 &1468747018
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -8059,13 +8332,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &1468747019
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1468747016}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1680793035}
+  - {fileID: 1307017315}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1680793035}
+  m_AABB:
+    m_Center: {x: 1.1423035, y: -0.32252228, z: 0}
+    m_Extent: {x: 1.3768806, y: 0.7971736, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1468747020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8084,7 +8364,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1680793035}
+  - {fileID: 1307017315}
 --- !u!1 &1477640125
 GameObject:
   m_ObjectHideFlags: 0
@@ -8185,7 +8467,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1478820604}
   - component: {fileID: 1478820607}
-  - component: {fileID: 1478820606}
   - component: {fileID: 1478820605}
   m_Layer: 0
   m_Name: cabeza
@@ -8207,8 +8488,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1478820605
-MeshRenderer:
+--- !u!137 &1478820605
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -8241,13 +8522,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
---- !u!33 &1478820606
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1478820603}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1581586895}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1581586895}
+  m_AABB:
+    m_Center: {x: 0.43542343, y: -0.13662338, z: 0}
+    m_Extent: {x: 0.6491268, y: 0.7574698, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1478820607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8266,7 +8553,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1581586895}
 --- !u!1 &1485862644
 GameObject:
   m_ObjectHideFlags: 0
@@ -8342,7 +8630,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1485863843}
   - component: {fileID: 1485863846}
-  - component: {fileID: 1485863845}
   - component: {fileID: 1485863844}
   m_Layer: 0
   m_Name: pierna_der
@@ -8364,8 +8651,8 @@ Transform:
   m_Father: {fileID: 1654570482}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1485863844
-MeshRenderer:
+--- !u!137 &1485863844
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -8398,13 +8685,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1485863845
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1485863842}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 923469931}
+  - {fileID: 1678192168}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 923469931}
+  m_AABB:
+    m_Center: {x: 0.98398435, y: -0.47730517, z: 0}
+    m_Extent: {x: 0.9785099, y: 0.7088151, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1485863846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8423,7 +8717,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 923469931}
+  - {fileID: 1678192168}
 --- !u!1 &1495480510
 GameObject:
   m_ObjectHideFlags: 0
@@ -8570,7 +8866,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1532984923}
   - component: {fileID: 1532984926}
-  - component: {fileID: 1532984925}
   - component: {fileID: 1532984924}
   m_Layer: 0
   m_Name: petalo6
@@ -8592,8 +8887,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1532984924
-MeshRenderer:
+--- !u!137 &1532984924
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -8626,13 +8921,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1532984925
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1532984922}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1874443247}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1874443247}
+  m_AABB:
+    m_Center: {x: 0.31903625, y: -0.08642319, z: 0}
+    m_Extent: {x: 0.84538805, y: 0.359545, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1532984926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8651,7 +8952,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1874443247}
 --- !u!1 &1537014281
 GameObject:
   m_ObjectHideFlags: 0
@@ -8799,7 +9101,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1574556225}
   - component: {fileID: 1574556228}
-  - component: {fileID: 1574556227}
   - component: {fileID: 1574556226}
   m_Layer: 0
   m_Name: cola7
@@ -8821,8 +9122,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1574556226
-MeshRenderer:
+--- !u!137 &1574556226
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -8855,13 +9156,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1574556227
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1574556224}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1301705967}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1301705967}
+  m_AABB:
+    m_Center: {x: 0.69560546, y: -0.05472046, z: 0}
+    m_Extent: {x: 0.7744499, y: 0.75046015, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1574556228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8880,7 +9187,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1301705967}
 --- !u!1 &1575164163
 GameObject:
   m_ObjectHideFlags: 0
@@ -8981,7 +9289,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1584536201}
   - component: {fileID: 1584536204}
-  - component: {fileID: 1584536203}
   - component: {fileID: 1584536202}
   m_Layer: 0
   m_Name: cabeza
@@ -9003,8 +9310,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1584536202
-MeshRenderer:
+--- !u!137 &1584536202
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -9037,13 +9344,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
---- !u!33 &1584536203
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1584536200}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 2104312164}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 2104312164}
+  m_AABB:
+    m_Center: {x: 0.37027425, y: 0.13226737, z: 0}
+    m_Extent: {x: 0.86425024, y: 0.58997595, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1584536204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9062,7 +9375,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 2104312164}
 --- !u!1 &1584732100
 GameObject:
   m_ObjectHideFlags: 0
@@ -9072,7 +9386,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1584732101}
   - component: {fileID: 1584732104}
-  - component: {fileID: 1584732103}
   - component: {fileID: 1584732102}
   m_Layer: 0
   m_Name: petalo7
@@ -9094,8 +9407,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1584732102
-MeshRenderer:
+--- !u!137 &1584732102
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -9128,13 +9441,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1584732103
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1584732100}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1872078861}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1872078861}
+  m_AABB:
+    m_Center: {x: 0.36359885, y: -0.021746784, z: 0}
+    m_Extent: {x: 0.7715013, y: 0.30962953, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1584732104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9153,7 +9472,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1872078861}
 --- !u!1 &1594189293
 GameObject:
   m_ObjectHideFlags: 0
@@ -9364,7 +9684,7 @@ Transform:
   m_Children:
   - {fileID: 754227986}
   m_Father: {fileID: 668305717}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 96.718}
 --- !u!114 &1620411885
 MonoBehaviour:
@@ -9391,7 +9711,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1629746313}
   - component: {fileID: 1629746316}
-  - component: {fileID: 1629746315}
   - component: {fileID: 1629746314}
   m_Layer: 0
   m_Name: hoja
@@ -9413,8 +9732,8 @@ Transform:
   m_Father: {fileID: 1333819324}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1629746314
-MeshRenderer:
+--- !u!137 &1629746314
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -9447,13 +9766,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
---- !u!33 &1629746315
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1629746312}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1016457863}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1016457863}
+  m_AABB:
+    m_Center: {x: 0.6308442, y: -0.026036203, z: 0}
+    m_Extent: {x: 0.4889093, y: 0.70052904, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1629746316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9472,7 +9797,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 4
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1016457863}
 --- !u!1 &1642214505
 GameObject:
   m_ObjectHideFlags: 0
@@ -9614,7 +9940,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1655621026}
   - component: {fileID: 1655621029}
-  - component: {fileID: 1655621028}
   - component: {fileID: 1655621027}
   m_Layer: 0
   m_Name: petalo7
@@ -9636,8 +9961,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1655621027
-MeshRenderer:
+--- !u!137 &1655621027
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -9670,13 +9995,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1655621028
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1655621025}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1234623241}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1234623241}
+  m_AABB:
+    m_Center: {x: 0.2910847, y: 0.07300693, z: 0}
+    m_Extent: {x: 0.8165136, y: 0.34260678, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1655621029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9695,7 +10026,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1234623241}
 --- !u!1 &1669844996
 GameObject:
   m_ObjectHideFlags: 0
@@ -9895,7 +10227,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1697404649}
   - component: {fileID: 1697404652}
-  - component: {fileID: 1697404651}
   - component: {fileID: 1697404650}
   m_Layer: 0
   m_Name: brazo_iz
@@ -9917,8 +10248,8 @@ Transform:
   m_Father: {fileID: 1333819324}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1697404650
-MeshRenderer:
+--- !u!137 &1697404650
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -9951,13 +10282,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1697404651
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1697404648}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 728122464}
+  - {fileID: 1509438335}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 728122464}
+  m_AABB:
+    m_Center: {x: 0.6373161, y: 0.08269428, z: 0}
+    m_Extent: {x: 1.2780316, y: 0.42181677, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1697404652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9976,7 +10314,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 728122464}
+  - {fileID: 1509438335}
 --- !u!1 &1698122764
 GameObject:
   m_ObjectHideFlags: 0
@@ -10031,7 +10371,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1710378052}
   - component: {fileID: 1710378055}
-  - component: {fileID: 1710378054}
   - component: {fileID: 1710378053}
   m_Layer: 0
   m_Name: cabeza
@@ -10053,8 +10392,8 @@ Transform:
   m_Father: {fileID: 1654570482}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1710378053
-MeshRenderer:
+--- !u!137 &1710378053
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -10087,13 +10426,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
---- !u!33 &1710378054
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1710378051}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1158699705}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1158699705}
+  m_AABB:
+    m_Center: {x: 0.64808476, y: 0.42147255, z: 0}
+    m_Extent: {x: 0.9134687, y: 1.2645197, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1710378055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10112,7 +10457,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 2
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1158699705}
 --- !u!1 &1713025100
 GameObject:
   m_ObjectHideFlags: 0
@@ -10167,7 +10513,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1723819347}
   - component: {fileID: 1723819350}
-  - component: {fileID: 1723819349}
   - component: {fileID: 1723819348}
   m_Layer: 0
   m_Name: tallo
@@ -10189,8 +10534,8 @@ Transform:
   m_Father: {fileID: 1333819324}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1723819348
-MeshRenderer:
+--- !u!137 &1723819348
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -10223,13 +10568,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1723819349
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1723819346}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1016457863}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1016457863}
+  m_AABB:
+    m_Center: {x: 0.10448707, y: 0.09022078, z: 0}
+    m_Extent: {x: 0.21324486, y: 0.31106693, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1723819350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10248,7 +10599,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1016457863}
 --- !u!1 &1800372096
 GameObject:
   m_ObjectHideFlags: 0
@@ -10323,7 +10675,7 @@ Transform:
   m_Children:
   - {fileID: 1669844997}
   m_Father: {fileID: 668305717}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 96.718}
 --- !u!114 &1805902712
 MonoBehaviour:
@@ -10350,7 +10702,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1817369671}
   - component: {fileID: 1817369674}
-  - component: {fileID: 1817369673}
   - component: {fileID: 1817369672}
   m_Layer: 0
   m_Name: cola5
@@ -10372,8 +10723,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1817369672
-MeshRenderer:
+--- !u!137 &1817369672
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -10406,13 +10757,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1817369673
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1817369670}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 785466218}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 785466218}
+  m_AABB:
+    m_Center: {x: 0.4814136, y: -0.04077208, z: 0}
+    m_Extent: {x: 0.6736444, y: 0.84993005, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1817369674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10431,7 +10788,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 785466218}
 --- !u!1 &1824476189
 GameObject:
   m_ObjectHideFlags: 0
@@ -10507,7 +10865,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1830819172}
   - component: {fileID: 1830819175}
-  - component: {fileID: 1830819174}
   - component: {fileID: 1830819173}
   m_Layer: 0
   m_Name: cuerpo
@@ -10529,8 +10886,8 @@ Transform:
   m_Father: {fileID: 1333819324}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1830819173
-MeshRenderer:
+--- !u!137 &1830819173
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -10563,13 +10920,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
---- !u!33 &1830819174
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1830819171}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 551429734}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 551429734}
+  m_AABB:
+    m_Center: {x: 0.6323459, y: 0.0263035, z: 0}
+    m_Extent: {x: 0.71486783, y: 0.49422577, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1830819175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10588,7 +10951,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 551429734}
 --- !u!1 &1836805672
 GameObject:
   m_ObjectHideFlags: 0
@@ -10890,7 +11254,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1877256735}
   - component: {fileID: 1877256738}
-  - component: {fileID: 1877256737}
   - component: {fileID: 1877256736}
   m_Layer: 0
   m_Name: pierna_der
@@ -10912,8 +11275,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1877256736
-MeshRenderer:
+--- !u!137 &1877256736
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -10946,13 +11309,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1877256737
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1877256734}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1564072907}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1564072907}
+  m_AABB:
+    m_Center: {x: 0.36996138, y: -0.011791535, z: 0}
+    m_Extent: {x: 0.84590995, y: 0.24349496, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1877256738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10971,7 +11340,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1564072907}
 --- !u!1 &1898474387
 GameObject:
   m_ObjectHideFlags: 0
@@ -10981,7 +11351,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1898474388}
   - component: {fileID: 1898474391}
-  - component: {fileID: 1898474390}
   - component: {fileID: 1898474389}
   m_Layer: 0
   m_Name: cuerpo
@@ -11003,8 +11372,8 @@ Transform:
   m_Father: {fileID: 1654570482}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1898474389
-MeshRenderer:
+--- !u!137 &1898474389
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11037,13 +11406,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1898474390
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1898474387}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1679914467}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1679914467}
+  m_AABB:
+    m_Center: {x: 1.6247265, y: 0.013354063, z: 0}
+    m_Extent: {x: 2.590708, y: 2.2079942, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1898474391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11062,7 +11437,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1679914467}
 --- !u!1 &1912519404
 GameObject:
   m_ObjectHideFlags: 0
@@ -11072,7 +11448,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1912519405}
   - component: {fileID: 1912519408}
-  - component: {fileID: 1912519407}
   - component: {fileID: 1912519406}
   m_Layer: 0
   m_Name: pierna_iz
@@ -11094,8 +11469,8 @@ Transform:
   m_Father: {fileID: 1009996747}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1912519406
-MeshRenderer:
+--- !u!137 &1912519406
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11128,13 +11503,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1912519407
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1912519404}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1108478997}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1108478997}
+  m_AABB:
+    m_Center: {x: 0.5347034, y: 0.0035838038, z: 0}
+    m_Extent: {x: 0.8497335, y: 0.24148521, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1912519408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11153,7 +11534,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1108478997}
 --- !u!1 &1994218963
 GameObject:
   m_ObjectHideFlags: 0
@@ -11163,7 +11545,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1994218964}
   - component: {fileID: 1994218967}
-  - component: {fileID: 1994218966}
   - component: {fileID: 1994218965}
   m_Layer: 0
   m_Name: brazo_der
@@ -11185,8 +11566,8 @@ Transform:
   m_Father: {fileID: 1275163807}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1994218965
-MeshRenderer:
+--- !u!137 &1994218965
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11219,13 +11600,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1994218966
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1994218963}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 475620010}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 475620010}
+  m_AABB:
+    m_Center: {x: 0.4137294, y: 0.07235256, z: 0}
+    m_Extent: {x: 0.68862367, y: 0.45888558, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &1994218967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11244,7 +11631,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 475620010}
 --- !u!1 &1997052551
 GameObject:
   m_ObjectHideFlags: 0
@@ -11395,7 +11783,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2043786050}
   - component: {fileID: 2043786053}
-  - component: {fileID: 2043786052}
   - component: {fileID: 2043786051}
   m_Layer: 0
   m_Name: pierna_der
@@ -11417,8 +11804,8 @@ Transform:
   m_Father: {fileID: 586561902}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &2043786051
-MeshRenderer:
+--- !u!137 &2043786051
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11451,13 +11838,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &2043786052
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2043786049}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 754847555}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 754847555}
+  m_AABB:
+    m_Center: {x: 0.32353127, y: 0.034388483, z: 0}
+    m_Extent: {x: 0.8253552, y: 0.22926435, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &2043786053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11476,7 +11869,8 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 754847555}
 --- !u!1 &2046093817
 GameObject:
   m_ObjectHideFlags: 0
@@ -11625,7 +12019,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2093106581}
   - component: {fileID: 2093106584}
-  - component: {fileID: 2093106583}
   - component: {fileID: 2093106582}
   m_Layer: 0
   m_Name: brazo_iz
@@ -11647,8 +12040,8 @@ Transform:
   m_Father: {fileID: 1231150316}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &2093106582
-MeshRenderer:
+--- !u!137 &2093106582
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11681,13 +12074,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &2093106583
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2093106580}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 675789949}
+  - {fileID: 974115832}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 675789949}
+  m_AABB:
+    m_Center: {x: 0.65723413, y: -0.14288932, z: 0}
+    m_Extent: {x: 0.7177108, y: 0.31657755, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &2093106584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11706,7 +12106,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 675789949}
+  - {fileID: 974115832}
 --- !u!1 &2101969104
 GameObject:
   m_ObjectHideFlags: 0
@@ -11926,7 +12328,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2117162933}
   - component: {fileID: 2117162936}
-  - component: {fileID: 2117162935}
   - component: {fileID: 2117162934}
   m_Layer: 0
   m_Name: pierna_iz
@@ -11948,8 +12349,8 @@ Transform:
   m_Father: {fileID: 1654570482}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &2117162934
-MeshRenderer:
+--- !u!137 &2117162934
+SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11982,13 +12383,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &2117162935
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2117162932}
+  serializedVersion: 2
+  m_Quality: 0
+  m_UpdateWhenOffscreen: 0
+  m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 0}
+  m_Bones:
+  - {fileID: 1594189294}
+  - {fileID: 682033564}
+  m_BlendShapeWeights: []
+  m_RootBone: {fileID: 1594189294}
+  m_AABB:
+    m_Center: {x: 0.9868398, y: 0.28188407, z: 0}
+    m_Extent: {x: 0.97196996, y: 0.7473128, z: 0}
+  m_DirtyAABB: 0
 --- !u!114 &2117162936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12007,7 +12415,9 @@ MonoBehaviour:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Bones: []
-  m_BoneTransforms: []
+  m_BoneTransforms:
+  - {fileID: 1594189294}
+  - {fileID: 682033564}
 --- !u!1 &2130647932
 GameObject:
   m_ObjectHideFlags: 0

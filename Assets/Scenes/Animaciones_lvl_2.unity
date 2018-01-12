@@ -1275,7 +1275,7 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 475620010}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: -0.42885748, w: 0.90337217}
+      solverRotation: {x: 0, y: 0, z: -0.43945804, w: 0.8982631}
       defaultLocalRotation: {x: 0, y: 0, z: -0.4465815, w: 0.894743}
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 142382864}
@@ -1284,7 +1284,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0, w: 1}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 19.719997, y: 5.895668, z: 0}
+    targetPosition: {x: 19.719997, y: 5.915668, z: 0}
     flip: 0
 --- !u!1 &287028930
 GameObject:
@@ -1977,14 +1977,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 475620009}
-  m_LocalRotation: {x: 0, y: 0, z: -0.42885748, w: 0.90337217}
+  m_LocalRotation: {x: 0, y: 0, z: -0.43945804, w: 0.8982631}
   m_LocalPosition: {x: 0.6655442, y: -0.82728964, z: 0}
   m_LocalScale: {x: 1.1582843, y: 1.1582842, z: 1.1582842}
   m_Children:
   - {fileID: 142382864}
   m_Father: {fileID: 1538659129}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -50.79}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -52.139004}
 --- !u!114 &475620011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1997,7 +1997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.0000001
+  m_Length: 0.99999934
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 142382864}
   m_AttachedIK: {fileID: 262821055}
@@ -2351,7 +2351,7 @@ MonoBehaviour:
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 1510517139}
       solverPosition: {x: 0, y: 0, z: 0}
-      solverRotation: {x: 0, y: 0, z: 0.41684675, w: 0.9089768}
+      solverRotation: {x: 0, y: 0, z: 0.4029085, w: 0.9152403}
       defaultLocalRotation: {x: 0, y: 0, z: 0.43640643, w: 0.89974964}
     - m_Bone: {fileID: 0}
       m_BoneTransform: {fileID: 1324532680}
@@ -2360,7 +2360,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0, w: 1}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 9.199999, y: 5.985668, z: 0}
+    targetPosition: {x: 9.199999, y: 6.0056677, z: 0}
     flip: 1
 --- !u!1 &546017558
 GameObject:
@@ -2812,7 +2812,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 607379795}
   m_LocalRotation: {x: 0, y: 0, z: -0.22180189, w: 0.9750918}
-  m_LocalPosition: {x: 1.4101774, y: 0.000000050252766, z: -0}
+  m_LocalPosition: {x: 1.410177, y: 0.000000050252766, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1651914041}
@@ -4713,7 +4713,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &864067311
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4748,7 +4748,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4770,7 +4770,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864067310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 14.02, y: 4.93, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5218,6 +5218,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 924726191}
+  - component: {fileID: 924726192}
   m_Layer: 0
   m_Name: huesos_seta
   m_TagString: Untagged
@@ -5240,6 +5241,23 @@ Transform:
   m_Father: {fileID: 1275163807}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &924726192
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 924726190}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1159b3e04221544398b52937f2b83c17, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &925551117
 GameObject:
   m_ObjectHideFlags: 0
@@ -6580,6 +6598,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1131392329}
+  - component: {fileID: 1131392330}
   m_Layer: 0
   m_Name: huesos_volador
   m_TagString: Untagged
@@ -6602,6 +6621,23 @@ Transform:
   m_Father: {fileID: 1654570482}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1131392330
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131392328}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ecf5d2f458d0c4ebab2ce1b791dcbb1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1147016674
 GameObject:
   m_ObjectHideFlags: 0
@@ -8833,14 +8869,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1510517138}
-  m_LocalRotation: {x: 0, y: 0, z: 0.41684675, w: 0.9089768}
+  m_LocalRotation: {x: 0, y: 0, z: 0.4029085, w: 0.9152403}
   m_LocalPosition: {x: 0.7711368, y: 0.77034676, z: 0}
   m_LocalScale: {x: 1.25, y: 1.2500001, z: 1.2500001}
   m_Children:
   - {fileID: 1324532680}
   m_Father: {fileID: 1538659129}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 49.271004}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 47.52}
 --- !u!114 &1510517140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8853,7 +8889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.0000002
+  m_Length: 0.9999998
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1324532680}
   m_AttachedIK: {fileID: 522644891}
@@ -9043,7 +9079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.0000001
+  m_Length: 1
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 1148024351}
   m_AttachedIK: {fileID: 0}
@@ -9888,7 +9924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 1.4101774
+  m_Length: 1.4101769
   m_Child: {fileID: 0}
   m_ChildTransform: {fileID: 607379796}
   m_AttachedIK: {fileID: 0}

@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0205cb8957891b44b142689caa23987, type: 3}
   m_Name: RecorderWindowSettings
   m_EditorClassIdentifier: 
-  m_Settings: {fileID: 114604017604562692}
---- !u!114 &114375871719009498
+  m_Settings: {fileID: 0}
+--- !u!114 &114154131587719522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -20,31 +20,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d935bf7a4fcf66488738bda5536c1cb, type: 3}
-  m_Name: bbbe460c-9949-43fd-8d21-5e6b3599b1fc
-  m_EditorClassIdentifier: 
-  m_DisplayName: Pixels
-  m_Id: defabeee-26e6-445c-872a-7648fc12978d
-  m_OutputSize: 0
-  m_AspectRatio: 0
-  m_ForceEvenSize: 1
-  source: 1
-  m_CameraTag: 
-  m_FlipFinalOutput: 1
-  m_AllowTransparency: 0
-  m_CaptureUI: 0
---- !u!114 &114604017604562692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d33382d41b60b72438f8e9586f86504a, type: 3}
+  m_Script: {fileID: 11500000, guid: a6ee9a8f826ced34082d654155141a26, type: 3}
   m_Name: Recorder Settings
   m_EditorClassIdentifier: 
-  m_AssetID: b3d45108bc56b4c14bbbe777098fb6f0
+  m_AssetID: 
   m_CaptureEveryNthFrame: 1
   m_FrameRateMode: 1
   m_FrameRate: 30
@@ -52,8 +31,8 @@ MonoBehaviour:
   m_StartFrame: 0
   m_EndFrame: 10
   m_StartTime: 0
-  m_EndTime: 5
-  m_DurationMode: 3
+  m_EndTime: 1
+  m_DurationMode: 0
   m_SynchFrameRate: 1
   m_BaseFileName:
     m_Pattern: movie.<ext>
@@ -61,27 +40,103 @@ MonoBehaviour:
     m_root: 1
     m_leaf: Recordings
   m_InputsSettings:
-    m_InputsSettingsAssets:
-    - {fileID: 114375871719009498}
-    ownerRecorderSettingsAssetId: b3d45108bc56b4c14bbbe777098fb6f0
-  m_RecorderTypeName: UTJ.FrameCapturer.Recorders.WEBMRecorder, Assembly-CSharp, Version=0.0.0.0,
+    m_InputsSettingsAssets: []
+    ownerRecorderSettingsAssetId: 
+  m_RecorderTypeName: UTJ.FrameCapturer.Recorders.MP4Recorder, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
-  m_WebmEncoderSettings:
+  m_MP4EncoderSettings:
     video:
       v: 1
-    videoEncoder: 0
     videoWidth: 0
     videoHeight: 0
-    videoTargetFramerate: 60
+    videoTargetFramerate: 30
     videoBitrateMode: 1
     videoTargetBitrate: 1024000
+    videoFlags: 62
     videoMaxTasks: 4
     audio:
       v: 1
-    audioEncoder: 0
     audioSampleRate: 48000
     audioNumChannels: 2
     audioBitrateMode: 1
     audioTargetBitrate: 128000
+    audioFlags: 6
     audioMaxTasks: 4
   m_AutoSelectBR: 1
+--- !u!114 &114721143496213588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65eb0e897ba0c84da8868303d21a17f, type: 3}
+  m_Name: Recorder Settings
+  m_EditorClassIdentifier: 
+  m_AssetID: 
+  m_CaptureEveryNthFrame: 1
+  m_FrameRateMode: 1
+  m_FrameRate: 30
+  m_FrameRateExact: 1
+  m_StartFrame: 0
+  m_EndFrame: 10
+  m_StartTime: 0
+  m_EndTime: 1
+  m_DurationMode: 0
+  m_SynchFrameRate: 1
+  m_BaseFileName:
+    m_Pattern: image_<0000>.<ext>
+  m_DestinationPath:
+    m_root: 1
+    m_leaf: Recordings
+  m_InputsSettings:
+    m_InputsSettingsAssets: []
+    ownerRecorderSettingsAssetId: 
+  m_RecorderTypeName: UTJ.FrameCapturer.Recorders.EXRRecorder, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  m_ExrEncoderSettings:
+    pixelFormat: 0
+    compression: 3
+    maxTasks: 2
+    width: 0
+    height: 0
+    channels: 0
+--- !u!114 &114893388709956456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4775271d95de24194e9dad1b8e46ab, type: 3}
+  m_Name: Recorder Settings
+  m_EditorClassIdentifier: 
+  m_AssetID: 
+  m_CaptureEveryNthFrame: 1
+  m_FrameRateMode: 1
+  m_FrameRate: 30
+  m_FrameRateExact: 1
+  m_StartFrame: 0
+  m_EndFrame: 10
+  m_StartTime: 0
+  m_EndTime: 1
+  m_DurationMode: 0
+  m_SynchFrameRate: 1
+  m_BaseFileName:
+    m_Pattern: image_<0000>.<ext>
+  m_DestinationPath:
+    m_root: 1
+    m_leaf: Recordings
+  m_InputsSettings:
+    m_InputsSettingsAssets: []
+    ownerRecorderSettingsAssetId: 
+  m_RecorderTypeName: UTJ.FrameCapturer.Recorders.PNGRecorder, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  m_PngEncoderSettings:
+    pixelFormat: 0
+    maxTasks: 2
+    width: 0
+    height: 0
+    channels: 0

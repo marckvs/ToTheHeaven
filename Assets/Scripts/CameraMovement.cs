@@ -15,6 +15,7 @@ public class CameraMovement : MonoBehaviour {
         background = GameObject.FindGameObjectWithTag("Background").GetComponent<SpriteRenderer>();
         limits = new Vector2(Camera.main.aspect*Camera.main.orthographicSize, Camera.main.orthographicSize);
         bg_bounds = new Vector2(background.sprite.bounds.size.x/2 + background.transform.position.x/2, background.sprite.bounds.size.y/2);
+
     }
 
     void FixedUpdate () {

@@ -22,6 +22,7 @@ public class PhiroMovement : MonoBehaviour {
 
     private Rigidbody2D _phiroRGD;
     private CapsuleCollider2D _phiroCOLL;
+    AudioManager audio;
 
     [Header("Movement")]
     public bool grounded = true;
@@ -97,6 +98,10 @@ public class PhiroMovement : MonoBehaviour {
         dashState = DashState.Ready;
         anim = this.GetComponent<AnimacionsPhiro>();
         doorLighCounterRef = GameObject.Find("DoorLightController").GetComponent<doorLightCounter>();
+        audio = FindObjectOfType<AudioManager>();
+        audio.Stop("Interface");
+        audio.Play("MainLevel");
+
 
     }
     public void Reset()
@@ -268,6 +273,7 @@ public class PhiroMovement : MonoBehaviour {
                 hit = true;
                 Debug.Log("Auch!");
                 knockingBack = true;
+                audio.Play("Damage");
 
                 ContactPoint2D pointOfCollision = collision.contacts[collision.contacts.Length / 2];
                 hitParticles.gameObject.SetActive(false);
@@ -351,6 +357,7 @@ public class PhiroMovement : MonoBehaviour {
         if (collision.gameObject.tag == "light")
         {
             light_caught = false;
+            audio.Play("Light");
         }
     }
 

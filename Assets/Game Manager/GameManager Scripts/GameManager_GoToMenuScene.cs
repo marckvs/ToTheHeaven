@@ -33,6 +33,7 @@ namespace GM
 
         void GoToMenuScene()
         {
+            FindObjectOfType<AudioManager>().Play("Interface");
             SceneManager.LoadScene(1);
             menuPausa.SetActive(false);
             Time.timeScale = 1;

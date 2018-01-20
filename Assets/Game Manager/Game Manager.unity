@@ -194,8 +194,8 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 347130679}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 376, y: 211.5, z: 0}
-  m_LocalScale: {x: 0.39166668, y: 0.39166668, z: 0.39166668}
+  m_LocalPosition: {x: 189, y: 173, z: 0}
+  m_LocalScale: {x: 0.196875, y: 0.196875, z: 0.196875}
   m_Children:
   - {fileID: 1484894358}
   m_Father: {fileID: 0}
@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 1169446358}
   - component: {fileID: 1169446357}
   - component: {fileID: 1169446356}
+  - component: {fileID: 1169446359}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -617,6 +618,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuPausa: {fileID: 793892373}
+--- !u!114 &1169446359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169446351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d76640844ef521418e0decfedf42d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - nombre: Button
+    clip: {fileID: 8300000, guid: bc33743b66efa134cadf6bbcfda460f3, type: 3}
+    source: {fileID: 0}
+  - nombre: Light
+    clip: {fileID: 8300000, guid: 1fe362a955bd25c46825f4f3bcee2689, type: 3}
+    source: {fileID: 0}
+  - nombre: Interface
+    clip: {fileID: 8300000, guid: 149f69240a7da4e4aa8bc64f9f8df73b, type: 3}
+    source: {fileID: 0}
+  - nombre: MainLevel
+    clip: {fileID: 8300000, guid: 59a4c0df432b05148819df71be4eaf82, type: 3}
+    source: {fileID: 0}
+  - nombre: Damage
+    clip: {fileID: 8300000, guid: 885c834d471de7a4fa93d1b3d0619b5b, type: 3}
+    source: {fileID: 0}
+  - nombre: Steps
+    clip: {fileID: 8300000, guid: 11a68942cb9d0294d81d7a86339d157c, type: 3}
+    source: {fileID: 0}
 --- !u!1 &1253688256
 GameObject:
   m_ObjectHideFlags: 0

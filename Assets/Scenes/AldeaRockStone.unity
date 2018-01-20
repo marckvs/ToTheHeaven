@@ -149,7 +149,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4344287439651452, guid: 6bd092dd81fcf114e8f83c03ed9ac1c9, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6bd092dd81fcf114e8f83c03ed9ac1c9, type: 2}
@@ -804,6 +804,146 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3c58dc8201d1844e840a7aac5be52a8, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &367342655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1468078666686340, guid: 0801977bfdef62742ab7ea2621e0b771,
+    type: 2}
+  m_PrefabInternal: {fileID: 1849553494}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 367342660}
+  - component: {fileID: 367342659}
+  - component: {fileID: 367342658}
+  - component: {fileID: 367342657}
+  - component: {fileID: 367342656}
+  m_Layer: 0
+  m_Name: PressFToInteract
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &367342656
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367342655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 367342658}
+  waitForFrames: 2
+--- !u!114 &367342657
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 114634596417676594, guid: 0801977bfdef62742ab7ea2621e0b771,
+    type: 2}
+  m_PrefabInternal: {fileID: 1849553494}
+  m_GameObject: {fileID: 367342655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1
+  indentLevel: 0
+  storyText: "Presiona F para interactuar con cualquier personaje cuando est\xE9s
+    cerca de \xE9l. Pulsa ESPACIO o ENTER para pasar el di\xE1logo."
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &367342658
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 114209790035379228, guid: 0801977bfdef62742ab7ea2621e0b771,
+    type: 2}
+  m_PrefabInternal: {fileID: 1849553494}
+  m_GameObject: {fileID: 367342655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 67
+    y: 68
+    width: 120
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 0
+  blockName: New Block
+  description: 
+  eventHandler: {fileID: 367342656}
+  commandList:
+  - {fileID: 367342657}
+--- !u!114 &367342659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114237260824946876, guid: 0801977bfdef62742ab7ea2621e0b771,
+    type: 2}
+  m_PrefabInternal: {fileID: 1849553494}
+  m_GameObject: {fileID: 367342655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 0, y: 0}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 400
+  zoom: 1
+  scrollViewRect:
+    serializedVersion: 2
+    x: -343
+    y: -340
+    width: 1114
+    height: 859
+  selectedBlocks:
+  - {fileID: 367342658}
+  selectedCommands:
+  - {fileID: 367342657}
+  variables: []
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
+--- !u!4 &367342660
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4803138505816820, guid: 0801977bfdef62742ab7ea2621e0b771,
+    type: 2}
+  m_PrefabInternal: {fileID: 1849553494}
+  m_GameObject: {fileID: 367342655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &458298469
 Prefab:
   m_ObjectHideFlags: 0
@@ -953,7 +1093,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4024557771155920, guid: 1566db87353f0d2489a09865024f51ad, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1566db87353f0d2489a09865024f51ad, type: 2}
@@ -1134,7 +1274,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4472914699647312, guid: 1e1873ee982eb214e964400bd6b0639f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 31.67
+      value: 31.63
       objectReference: {fileID: 0}
     - target: {fileID: 4472914699647312, guid: 1e1873ee982eb214e964400bd6b0639f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1298,9 +1438,145 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 35cb2c5edac0a1e4d835df3b24158f91, type: 2}
+    - target: {fileID: 114957178391921016, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Length
+      value: 1.0658784
+      objectReference: {fileID: 0}
+    - target: {fileID: 114086407761843052, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Length
+      value: 1.0850447
+      objectReference: {fileID: 0}
+    - target: {fileID: 114977534320186816, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[0].solverRotation.z
+      value: 0.8871292
+      objectReference: {fileID: 0}
+    - target: {fileID: 114977534320186816, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[0].solverRotation.w
+      value: 0.46152112
+      objectReference: {fileID: 0}
+    - target: {fileID: 114977534320186816, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[1].solverRotation.z
+      value: 0.30699837
+      objectReference: {fileID: 0}
+    - target: {fileID: 114977534320186816, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[1].solverRotation.w
+      value: 0.95171005
+      objectReference: {fileID: 0}
+    - target: {fileID: 114977534320186816, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.targetPosition.x
+      value: 31.752499
+      objectReference: {fileID: 0}
+    - target: {fileID: 114977534320186816, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.targetPosition.y
+      value: -3.4775
+      objectReference: {fileID: 0}
+    - target: {fileID: 114184567508079614, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Length
+      value: 1.049486
+      objectReference: {fileID: 0}
+    - target: {fileID: 114773788312362252, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Length
+      value: 1.1316023
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777784397893380, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[0].solverRotation.z
+      value: -0.9218312
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777784397893380, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[0].solverRotation.w
+      value: 0.38759157
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777784397893380, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[1].solverRotation.z
+      value: 0.6516544
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777784397893380, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.m_SolverPoses.Array.data[1].solverRotation.w
+      value: 0.758516
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777784397893380, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.targetPosition.x
+      value: 33.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114777784397893380, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Solver.targetPosition.y
+      value: -2.7424998
+      objectReference: {fileID: 0}
+    - target: {fileID: 114005452437583996, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Length
+      value: 1.0496007
+      objectReference: {fileID: 0}
+    - target: {fileID: 114361292611217598, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Length
+      value: 0.9999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 114500636854463482, guid: 1e1873ee982eb214e964400bd6b0639f,
+        type: 2}
+      propertyPath: m_Length
+      value: 1.0000097
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1e1873ee982eb214e964400bd6b0639f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1013090645
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1013090647}
+  - component: {fileID: 1013090646}
+  m_Layer: 0
+  m_Name: _FungusState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1013090646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1013090645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedFlowchart: {fileID: 2004748238}
+--- !u!4 &1013090647
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1013090645}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1033882270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1379,6 +1655,39 @@ Transform:
   m_PrefabParentObject: {fileID: 4385467454203574, guid: 23862ed727ba24246b7f51728cd4e815,
     type: 2}
   m_PrefabInternal: {fileID: 1203585818}
+--- !u!1 &1089727870 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1476991094590634, guid: e1a4e0f4e08835c448fc9dd45996a02c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1461879291}
+--- !u!70 &1089727873
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089727870}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -6.78, y: 1.2}
+  m_Size: {x: 5.71, y: 6.38}
+  m_Direction: 0
+--- !u!114 &1089727874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089727870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397c51e54a627344facf45711260227f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GO: {fileID: 0}
+  PressF: {fileID: 367342655}
 --- !u!1001 &1121558016
 Prefab:
   m_ObjectHideFlags: 0
@@ -2140,7 +2449,7 @@ Transform:
   - {fileID: 2036837326}
   - {fileID: 1957000819}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1556186258
 Prefab:
@@ -2551,7 +2860,7 @@ Transform:
   - {fileID: 1563048125}
   - {fileID: 475593416}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1662006632 stripped
 GameObject:
@@ -2575,6 +2884,80 @@ Transform:
   m_PrefabParentObject: {fileID: 4020817101542884, guid: f3c58dc8201d1844e840a7aac5be52a8,
     type: 2}
   m_PrefabInternal: {fileID: 272722233}
+--- !u!1001 &1849553494
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114237260824946876, guid: 0801977bfdef62742ab7ea2621e0b771,
+        type: 2}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803138505816820, guid: 0801977bfdef62742ab7ea2621e0b771, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803138505816820, guid: 0801977bfdef62742ab7ea2621e0b771, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803138505816820, guid: 0801977bfdef62742ab7ea2621e0b771, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803138505816820, guid: 0801977bfdef62742ab7ea2621e0b771, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803138505816820, guid: 0801977bfdef62742ab7ea2621e0b771, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803138505816820, guid: 0801977bfdef62742ab7ea2621e0b771, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803138505816820, guid: 0801977bfdef62742ab7ea2621e0b771, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803138505816820, guid: 0801977bfdef62742ab7ea2621e0b771, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114209790035379228, guid: 0801977bfdef62742ab7ea2621e0b771,
+        type: 2}
+      propertyPath: nodeRect.x
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 114209790035379228, guid: 0801977bfdef62742ab7ea2621e0b771,
+        type: 2}
+      propertyPath: nodeRect.y
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 114634596417676594, guid: 0801977bfdef62742ab7ea2621e0b771,
+        type: 2}
+      propertyPath: storyText
+      value: "Presiona F para interactuar con cualquier personaje cuando est\xE9s
+        cerca de \xE9l. Pulsa ESPACIO o ENTER para pasar el di\xE1logo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 114237260824946876, guid: 0801977bfdef62742ab7ea2621e0b771,
+        type: 2}
+      propertyPath: hideComponents
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114237260824946876, guid: 0801977bfdef62742ab7ea2621e0b771,
+        type: 2}
+      propertyPath: selectedCommands.Array.data[0]
+      value: 
+      objectReference: {fileID: 367342657}
+    m_RemovedComponents:
+    - {fileID: 0}
+  m_ParentPrefab: {fileID: 100100000, guid: 0801977bfdef62742ab7ea2621e0b771, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1869058034 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1424121648802872, guid: 1e1873ee982eb214e964400bd6b0639f,
@@ -2592,6 +2975,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "Est\xE1_Mirando_a_la_Derecha": 0
+--- !u!4 &1869058036 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4472914699647312, guid: 1e1873ee982eb214e964400bd6b0639f,
+    type: 2}
+  m_PrefabInternal: {fileID: 960976503}
+--- !u!114 &1869058037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1869058034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397c51e54a627344facf45711260227f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GO: {fileID: 2004748237}
+  PressF: {fileID: 367342655}
+--- !u!70 &1869058038
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1869058034}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.62015426, y: 0.6}
+  m_Size: {x: 3.15, y: 5.46}
+  m_Direction: 0
 --- !u!1 &1913401717 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1898886761106142, guid: fcc4eb6f5f95c9a4c86729cb63aed1b0,
@@ -2614,6 +3030,320 @@ Transform:
   m_PrefabParentObject: {fileID: 4508490272545606, guid: 0bd251201fac0c54ba0ef47d6d68ebd9,
     type: 2}
   m_PrefabInternal: {fileID: 458298469}
+--- !u!1 &2004748237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: b20518d45890e4be59ba82946f88026c, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2004748246}
+  - component: {fileID: 2004748240}
+  - component: {fileID: 2004748238}
+  - component: {fileID: 2004748241}
+  - component: {fileID: 2004748244}
+  - component: {fileID: 2004748243}
+  - component: {fileID: 2004748242}
+  - component: {fileID: 2004748245}
+  - component: {fileID: 2004748247}
+  - component: {fileID: 2004748249}
+  - component: {fileID: 2004748248}
+  - component: {fileID: 2004748239}
+  m_Layer: 0
+  m_Name: Alcalde - Character
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2004748238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 0, y: 0}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 400
+  zoom: 1
+  scrollViewRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  selectedBlocks: []
+  selectedCommands: []
+  variables: []
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
+--- !u!114 &2004748239
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  storyText: Espero que hayas disfrutado del viaje. Un saludo y hasta pronto.
+  description: 
+  character: {fileID: 2004748240}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2004748240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: b20518d45890e4be59ba82946f88026c,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Alcalde Rockstone
+  nameColor: {r: 0.32043612, g: 0.52205884, b: 0, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
+--- !u!114 &2004748241
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 274
+    y: 138
+    width: 153
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 0
+  blockName: New Block (Copy)
+  description: 
+  eventHandler: {fileID: 2004748245}
+  commandList:
+  - {fileID: 2004748244}
+  - {fileID: 2004748247}
+  - {fileID: 2004748243}
+  - {fileID: 2004748249}
+  - {fileID: 2004748248}
+  - {fileID: 2004748239}
+  - {fileID: 2004748242}
+--- !u!114 &2004748242
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 2004748237}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &2004748243
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 4
+  indentLevel: 0
+  storyText: "Tras esta puerta se encuentra la proxima aldea a la que te enfrentar\xE1s."
+  description: 
+  character: {fileID: 2004748240}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2004748244
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  indentLevel: 0
+  storyText: Hola Phiro. Por fin has conseguido llegar hasta nuestra aldea.
+  description: 
+  character: {fileID: 2004748240}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2004748245
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff5d850a887844fe87ae7d366d3ab5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 2004748241}
+--- !u!4 &2004748246
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: b20518d45890e4be59ba82946f88026c, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -42.173332, y: 4.746667, z: 0}
+  m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1.3333334}
+  m_Children: []
+  m_Father: {fileID: 1869058036}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2004748247
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  storyText: "Has pasado por mucho para llegar aqu\xED..."
+  description: 
+  character: {fileID: 2004748240}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2004748248
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  storyText: "Tendr\xE1s que esperar a que los magn\xEDficos desarrolladores construyan
+    el pr\xF3ximo nivel."
+  description: 
+  character: {fileID: 2004748240}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2004748249
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2004748237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  storyText: "Que por cierto est\xE1 en construcci\xF3n."
+  description: 
+  character: {fileID: 2004748240}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &2036837325
 GameObject:
   m_ObjectHideFlags: 0
